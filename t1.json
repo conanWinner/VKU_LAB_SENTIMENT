@@ -1,0 +1,116 @@
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "start",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "filePath": "/data/dataset.csv",
+        "options": {
+          "headerRow": true
+        }
+      },
+      "id": "readcsv",
+      "name": "Read CSV",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [400, 300]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data"
+      },
+      "id": "splitrows",
+      "name": "Split Rows",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [600, 300]
+    },
+    {
+      "parameters": {
+        "batchSize": 5
+      },
+      "id": "batch",
+      "name": "Split In Batches",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [800, 300]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Text: {{$json.text}}\nLabel: {{$json.label}}",
+        "options": {
+          "systemMessage": "You are a dataset augmentation assistant for sentiment analysis. Generate 3 paraphrased sentences that keep the same sentiment. Return JSON format: {\"augmentations\": [\"s1\",\"s2\",\"s3\"]}"
+        }
+      },
+      "id": "llm",
+      "name": "LLM Augmentation",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [1000, 300]
+    },
+    {
+      "parameters": {
+        "model": {
+          "mode": "id",
+          "value": "gpt-4o-mini"
+        }
+      },
+      "id": "openai",
+      "name": "OpenAI Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [1000, 450]
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = JSON.parse($json.output);\nreturn data.augmentations.map(t => ({ json: { original: $json.text, augmented: t, label: $json.label }}));"
+      },
+      "id": "parse",
+      "name": "Parse Augmentations",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1200, 300]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "fileName": "augmented_dataset.csv"
+      },
+      "id": "save",
+      "name": "Save Dataset",
+      "type": "n8n-nodes-base.spreadsheetFile",
+      "typeVersion": 2,
+      "position": [1400, 300]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [[{ "node": "Read CSV", "type": "main", "index": 0 }]]
+    },
+    "Read CSV": {
+      "main": [[{ "node": "Split Rows", "type": "main", "index": 0 }]]
+    },
+    "Split Rows": {
+      "main": [[{ "node": "Split In Batches", "type": "main", "index": 0 }]]
+    },
+    "Split In Batches": {
+      "main": [[{ "node": "LLM Augmentation", "type": "main", "index": 0 }]]
+    },
+    "LLM Augmentation": {
+      "main": [[{ "node": "Parse Augmentations", "type": "main", "index": 0 }]]
+    },
+    "OpenAI Model": {
+      "ai_languageModel": [[{ "node": "LLM Augmentation", "type": "ai_languageModel", "index": 0 }]]
+    },
+    "Parse Augmentations": {
+      "main": [[{ "node": "Save Dataset", "type": "main", "index": 0 }]]
+    }
+  }
+}

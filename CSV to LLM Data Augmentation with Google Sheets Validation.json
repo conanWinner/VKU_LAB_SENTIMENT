@@ -1,0 +1,597 @@
+{
+  "name": "CSV to LLM Data Augmentation with Google Sheets Validation",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "b6d646f2-d65e-48c8-8b8f-4bbd7719809e",
+      "name": "Start Workflow",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1168,
+        1792
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "condition-neg",
+              "leftValue": "={{ $json.polarity }}",
+              "rightValue": "negative",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "172972b6-4e53-460a-b54d-1b6ed93cd392",
+      "name": "Filter Negative Only",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.3,
+      "position": [
+        -1168,
+        1216
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1rDSKw1GRpzMhxQ0ToQK9FtPtwyqi3vNEH6E0xVPwyYo",
+          "mode": "list",
+          "cachedResultName": "data_1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rDSKw1GRpzMhxQ0ToQK9FtPtwyqi3vNEH6E0xVPwyYo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 399317977,
+          "mode": "list",
+          "cachedResultName": "train",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rDSKw1GRpzMhxQ0ToQK9FtPtwyqi3vNEH6E0xVPwyYo/edit#gid=399317977"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "polarity",
+              "lookupValue": "neutral"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b75adc50-6759-41bc-a3fe-269c66287814",
+      "name": "Read Data from Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -944,
+        1792
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "c7z8xcygu4XuKXyB",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "condition-1",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "isEmpty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "condition-2",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "processed",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "id": "3ede368e-ed3f-4372-b4d8-d9e41f5af098",
+      "name": "Filter Unprocessed Records1",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.3,
+      "position": [
+        -1168,
+        992
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -720,
+        1792
+      ],
+      "id": "845f7b9e-aab6-4398-8ea6-998790a16794",
+      "name": "Loop Over Items2"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.Sentence }}",
+        "options": {
+          "systemMessage": "=You are an expert in Aspect-Based Sentiment Analysis (ABSA) dataset augmentation.\n\nYour task is to generate paraphrased versions of a sentence while preserving the sentiment toward a specific aspect term.\n\nRules:\n- The aspect term must remain exactly the same word.\n- The sentiment toward the aspect must remain unchanged.\n- Do not remove the aspect term.\n- Do not introduce new conflicting opinions.\n- Only rephrase wording or structure.\n\nSentence:{{ $json.Sentence }}\nAspect Term:{{ $json['Aspect Term'] }}\nSentiment:{{ $json.polarity }}\n\nGenerate exactly 3 paraphrased sentences.\n\nReturn ONLY a JSON array like this:\n[\"sentence1\", \"sentence2\", \"sentence3\"] "
+        }
+      },
+      "id": "61879b63-ba70-474e-b2b6-988f35ad1170",
+      "name": "Augment Data with LLM1",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -128,
+        1920
+      ]
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-oss-120b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        2096
+      ],
+      "id": "f5fb30df-e4dc-4246-8972-5a6a6f6bcc87",
+      "name": "Groq Chat Model1",
+      "credentials": {
+        "groqApi": {
+          "id": "5esrGqcMf4QRNC08",
+          "name": "Groq account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const originalData = {\n  Sentence: $input.item.json.Sentence || $('Loop Over Items2').item.json.Sentence,\n  'Aspect Term': $input.item.json['Aspect Term'] || $('Loop Over Items2').item.json['Aspect Term'],\n  polarity: $input.item.json.polarity || $('Loop Over Items2').item.json.polarity\n};\n\nconst rawOutput = $input.item.json.output;\nlet augmentedArray;\n\ntry {\n  // Strip markdown code fences if present\n  const cleaned = rawOutput.replace(/```json|```/g, '').trim();\n  augmentedArray = JSON.parse(cleaned);\n} catch(e) {\n  // Fallback: extract array from string\n  const match = rawOutput.match(/\\[.*\\]/s);\n  if (match) {\n    augmentedArray = JSON.parse(match[0]);\n  } else {\n    throw new Error('Cannot parse LLM output: ' + rawOutput);\n  }\n}\n\nreturn [{\n  json: {\n    ...originalData,\n    augmented_sentences: augmentedArray\n  }\n}];"
+      },
+      "id": "7c06dc71-016c-4033-ae16-a4d9ca6ff497",
+      "name": "Parse JSON Array1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        1920
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        896,
+        2048
+      ],
+      "id": "9a694ab9-f6ef-4a67-9a82-4b3a3c5e2c82",
+      "name": "Wait1",
+      "webhookId": "3b3a687d-c4da-4028-9093-b953a52c1443"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1rDSKw1GRpzMhxQ0ToQK9FtPtwyqi3vNEH6E0xVPwyYo",
+          "mode": "list",
+          "cachedResultName": "data_1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rDSKw1GRpzMhxQ0ToQK9FtPtwyqi3vNEH6E0xVPwyYo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 399317977,
+          "mode": "list",
+          "cachedResultName": "train",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rDSKw1GRpzMhxQ0ToQK9FtPtwyqi3vNEH6E0xVPwyYo/edit#gid=399317977"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "row_number": "={{ $('Loop Over Items2').item.json.row_number }}",
+            "Status": "processed"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "Sentence",
+              "displayName": "Sentence",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Aspect Term",
+              "displayName": "Aspect Term",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "polarity",
+              "displayName": "polarity",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        672,
+        1952
+      ],
+      "id": "2fb7b029-4d8f-4b45-9434-37a7d06011ef",
+      "name": "Update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "c7z8xcygu4XuKXyB",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "468dea9a-64ef-419f-a278-71d6c26129d8",
+              "leftValue": "={{ $json.Status }}",
+              "rightValue": "processed",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -464,
+        1872
+      ],
+      "id": "ebb27fc7-c90f-4b9d-8ae1-3d1f3d43775f",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1rDSKw1GRpzMhxQ0ToQK9FtPtwyqi3vNEH6E0xVPwyYo",
+          "cachedResultName": "data_1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rDSKw1GRpzMhxQ0ToQK9FtPtwyqi3vNEH6E0xVPwyYo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1289027897,
+          "mode": "list",
+          "cachedResultName": "neutral",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rDSKw1GRpzMhxQ0ToQK9FtPtwyqi3vNEH6E0xVPwyYo/edit#gid=1289027897"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {
+            "original_sentence": "={{ $json.original_sentence }}",
+            "aspect_term": "={{ $json.aspect_term }}",
+            "polarity": "={{ $('Prepare Individual Rows1').item.json.polarity }}",
+            "augmented_sentence": "={{ $('Prepare Individual Rows1').item.json.augmented_sentence }}",
+            "status": "={{ $('Prepare Individual Rows1').item.json.status }}",
+            "created_at": "={{ $('Prepare Individual Rows1').item.json.created_at }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "original_sentence",
+              "displayName": "original_sentence",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "aspect_term",
+              "displayName": "aspect_term",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "polarity",
+              "displayName": "polarity",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "augmented_sentence",
+              "displayName": "augmented_sentence",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "8aa81452-dd14-4a05-b075-3ba47739040a",
+      "name": "Update Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        448,
+        1920
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "c7z8xcygu4XuKXyB",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Start Workflow": {
+      "main": [
+        [
+          {
+            "node": "Read Data from Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Negative Only": {
+      "main": [
+        []
+      ]
+    },
+    "Read Data from Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Unprocessed Records1": {
+      "main": [
+        []
+      ]
+    },
+    "Loop Over Items2": {
+      "main": [
+        [],
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Augment Data with LLM1": {
+      "main": [
+        [
+          {
+            "node": "Parse JSON Array1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Augment Data with LLM1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse JSON Array1": {
+      "main": [
+        [
+          {
+            "node": "Update Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Augment Data with LLM1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "c59e0a61-3e67-4e14-8671-485c203b0210",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "479beae7d39c405d174d11329345306dec7569ca6a52707a6225adf04877681a"
+  },
+  "id": "S7WCiD1jkrFRJorZ",
+  "tags": []
+}
