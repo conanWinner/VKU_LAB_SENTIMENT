@@ -1,7 +1,8 @@
 # Run Server
 
 ## Để chạy server local:
-- Mở terminal ở thư mục này
+- tạo folder /model trong /Server trước => Download best_model.pt từ drive
+- Mở terminal ở thư mục /Server
 - Tạo .venv bằng lệnh 
   python -m venv .venv
 - Khởi động venv bằng lệnh 
