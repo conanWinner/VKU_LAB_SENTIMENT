@@ -1,0 +1,12 @@
+# PyTorch models
+*.pt
+*.pth
+
+# Environments
+.venv/
+venv/
+env/
+__pycache__/
+
+# macOS
+.DS_Store
