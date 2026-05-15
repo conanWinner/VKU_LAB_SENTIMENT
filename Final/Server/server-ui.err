@@ -1,0 +1,39 @@
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 46473.64it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: vinai/phobert-base
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.decoder.bias      | UNEXPECTED |  | 
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+lm_head.dense.bias        | UNEXPECTED |  | 
+lm_head.bias              | UNEXPECTED |  | 
+lm_head.decoder.weight    | UNEXPECTED |  | 
+lm_head.dense.weight      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.5:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [07/May/2026 23:29:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:29:43] "GET /static/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:29:43] "GET /static/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:29:43] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:29:50] "POST /predict HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:30:01] "[36mGET / HTTP/1.1[0m" 304 -
+127.0.0.1 - - [07/May/2026 23:30:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [07/May/2026 23:30:01] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [07/May/2026 23:30:01] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:30:03] "POST /predict HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:30:21] "POST /predict HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:30:33] "POST /predict HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:30:46] "POST /predict HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:31:41] "POST /predict HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:32:00] "POST /predict HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:33:27] "POST /predict HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:33:58] "POST /predict HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:34:34] "POST /predict HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:35:39] "POST /predict HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 23:36:01] "POST /predict HTTP/1.1" 200 -

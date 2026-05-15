@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VKU Sentiment Analyst</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="workspace" aria-label="Sentiment analysis workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">PhoBERT Multi-task ABSA</p>
+          <h1>VKU Sentiment Analyst</h1>
+        </div>
+        <div class="status-pill" id="apiStatus">
+          <span class="status-dot"></span>
+          <span>Đang kiểm tra API</span>
+        </div>
+      </header>
+
+      <div class="analysis-grid">
+        <section class="input-panel">
+          <div class="panel-header">
+            <div>
+              <h2>Nội dung phản hồi</h2>
+              <p>Nhập câu đánh giá để mô hình nhận diện khía cạnh và sắc thái.</p>
+            </div>
+          </div>
+
+          <form id="analysisForm">
+            <label for="feedbackText">Text</label>
+            <textarea
+              id="feedbackText"
+              name="text"
+              rows="9"
+              maxlength="1000"
+              placeholder="Ví dụ: Giảng viên dạy rất hay nhưng phòng học quá nóng."
+              required
+            >Giảng viên dạy rất hay nhưng phòng học quá nóng.</textarea>
+
+            <div class="controls-row">
+              <label class="threshold-control" for="threshold">
+                <span>Threshold</span>
+                <strong id="thresholdValue">0.60</strong>
+              </label>
+              <input id="threshold" type="range" min="0.1" max="0.95" step="0.05" value="0.6">
+            </div>
+
+            <div class="actions">
+              <button class="secondary-button" type="button" id="sampleButton">Dùng mẫu</button>
+              <button class="primary-button" type="submit" id="submitButton">Phân tích</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="result-panel" aria-live="polite">
+          <div class="panel-header">
+            <div>
+              <h2>Kết quả phân tích</h2>
+              <p id="resultSummary">Chưa có kết quả. Hãy nhập phản hồi và bấm phân tích.</p>
+            </div>
+          </div>
+
+          <div class="result-meta" id="resultMeta" hidden>
+            <div>
+              <span>Khía cạnh</span>
+              <strong id="aspectCount">0</strong>
+            </div>
+            <div>
+              <span>Threshold</span>
+              <strong id="metaThreshold">0.60</strong>
+            </div>
+            <div>
+              <span>Sentiment nổi bật</span>
+              <strong id="dominantSentiment">-</strong>
+            </div>
+          </div>
+
+          <div class="empty-state" id="emptyState">
+            <div class="empty-icon">SA</div>
+            <p>Kết quả sẽ xuất hiện theo từng category, sentiment và confidence.</p>
+          </div>
+
+          <div class="results-list" id="resultsList"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
