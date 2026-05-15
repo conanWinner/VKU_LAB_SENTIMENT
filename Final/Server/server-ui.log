@@ -1,0 +1,12 @@
+Device: cpu
+Loading tokenizer: vinai/phobert-base ...
+Loading PhoBERT encoder: vinai/phobert-base ...
+Loading trained weights: model/best_model.pt ...
+[OK] Model loaded on cpu
+
+Server starting at http://0.0.0.0:5000
+   POST /predict  - Predict aspect + sentiment
+   GET  /health   - Health check
+
+ * Serving Flask app 'server'
+ * Debug mode: off
