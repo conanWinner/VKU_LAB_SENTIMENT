@@ -24,7 +24,7 @@ import unicodedata
 import numpy as np
 import torch
 import torch.nn as nn
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from transformers import AutoModel, AutoTokenizer
 from underthesea import word_tokenize
 
@@ -197,7 +197,7 @@ def load_model(model_path: str, device: torch.device):
 
     model.to(device)
     model.eval()
-    print(f'✓ Model loaded on {device}')
+    print(f'[OK] Model loaded on {device}')
     return model
 
 
@@ -209,12 +209,25 @@ def create_app(model, tokenizer, device):
 
     app = Flask(__name__)
 
-    @app.route('/predict', methods=['POST'])
+    @app.route('/', methods=['GET'])
+    def index():
+        """Serve the sentiment analysis web interface."""
+        return send_from_directory(app.static_folder, 'index.html')
+
+    @app.route('/predict', methods=['GET', 'POST'])
     def api_predict():
         """
         Nhận JSON {"text": "..."} hoặc {"text": "...", "threshold": 0.6}
         Trả về danh sách aspect-sentiment.
         """
+        if request.method == 'GET':
+            return jsonify({
+                'error': 'Use POST /predict with a JSON body containing "text".',
+                'example': {
+                    'text': 'Giảng viên dạy rất hay nhưng phòng học quá nóng.',
+                },
+            }), 405
+
         data = request.get_json(force=True, silent=True)
         if not data or 'text' not in data:
             return jsonify({'error': 'Missing "text" field in JSON body'}), 400
@@ -273,7 +286,7 @@ def main():
 
     # ── Kiểm tra file model tồn tại ─────────────────────────────────────
     if not os.path.isfile(args.model):
-        print(f'✗ Model file not found: {args.model}')
+        print(f'[ERROR] Model file not found: {args.model}')
         sys.exit(1)
 
     # ── Device ───────────────────────────────────────────────────────────
@@ -295,9 +308,9 @@ def main():
 
     # ── Start server ─────────────────────────────────────────────────────
     app = create_app(model, tokenizer, device)
-    print(f'\n🚀 Server starting at http://{args.host}:{args.port}')
-    print(f'   POST /predict  — Predict aspect + sentiment')
-    print(f'   GET  /health   — Health check\n')
+    print(f'\nServer starting at http://{args.host}:{args.port}')
+    print('   POST /predict  - Predict aspect + sentiment')
+    print('   GET  /health   - Health check\n')
     app.run(host=args.host, port=args.port, debug=args.debug)
 
 

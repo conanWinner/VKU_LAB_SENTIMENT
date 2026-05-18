@@ -1,0 +1,425 @@
+{
+  "name": "For Train 6",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "1afdbccb-6240-4758-b508-2249bca81205",
+      "name": "Start Workflow",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        80,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1UCynOtL2cN3jC5ODkHkczh0T1esIfiZm4jxDPXwkzVo",
+          "mode": "list",
+          "cachedResultName": "Data_uitnlp/vietnamese_students_feedback",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1UCynOtL2cN3jC5ODkHkczh0T1esIfiZm4jxDPXwkzVo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1058836917,
+          "mode": "list",
+          "cachedResultName": "test",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1UCynOtL2cN3jC5ODkHkczh0T1esIfiZm4jxDPXwkzVo/edit#gid=1058836917"
+        },
+        "options": {}
+      },
+      "id": "fce261cd-fbaa-4759-acd6-e0bee19f2b56",
+      "name": "Read Data from Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        304,
+        800
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "6dlzTXl0wfsatNY5",
+          "name": "Google Sheets OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        528,
+        800
+      ],
+      "id": "a101842c-f42d-494d-8042-a56d2d80da3e",
+      "name": "Loop Over Items2"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.sentence }}",
+        "options": {
+          "systemMessage": "=You are an expert Vietnamese ABSA data annotator for student feedback.\n\nTask: assign sentiment to 11 aspects. Each aspect must be one of:\n\"positive\", \"negative\", \"neutral\", \"none\".\n\nA sentence may contain multiple aspects. Sentiment must be assigned per aspect, not copied from the original sentence-level sentiment.\n\nOriginal labels from UIT-VSFC:\nsentiment: 0=negative, 1=neutral, 2=positive.\ntopic: 0=lecturer, 1=training_program, 2=facility, 3=others.\nThese labels are hints only. Always prioritize the actual Vietnamese sentence.\n\nAspects:\nky_nang_giang_day: teaching method, explanation, delivery, easy/hard to understand, teaching speed.\nkinh_nghiem: practical experience, real-world examples, practical relevance.\nhanh_vi: attitude, behavior, communication, enthusiasm, friendliness, support.\nbai_tap: assignments, exercises, practice tasks, projects, amount, difficulty, deadlines.\ncham_diem: grades, grading method, criteria, fairness of assessment.\ncung_cap_tai_lieu: slides, textbooks, learning materials, syllabus, learning resources.\nkien_thuc: professional knowledge, expertise, correctness/usefulness of knowledge.\nchuong_trinh_hoc: course, curriculum, subject content, course structure, duration.\nthiet_bi_day_hoc: classroom, projector, computer, speaker, mic, fan, light, lab, facilities.\nde_xuat: suggestion/request for improvement. Signals: nên, cần, mong, đề nghị, hy vọng, nếu được.\nnoi_chung: general feedback, too short or too vague for specific aspects.\n\nRules:\n- Assign an aspect only if there is clear evidence in the sentence.\n- Do not over-infer.\n- Missing aspects = \"none\".\n- Do not use noi_chung if a specific aspect is clearly present, unless there is a separate general comment.\n- If there is a suggestion about a specific aspect, label both that aspect and de_xuat.\n- positive = praise/satisfaction: tốt, hay, dễ hiểu, nhiệt tình, hữu ích, đầy đủ, công bằng, rõ ràng.\n- negative = complaint/dissatisfaction: khó hiểu, thiếu, chưa tốt, quá nhiều, quá ít, không rõ, không công bằng.\n- neutral = factual or neutral suggestion, no clear praise/complaint.\n\nReturn only valid JSON. No markdown. No explanation.\n\nSchema:\n{\n  \"ky_nang_giang_day\": \"...\",\n  \"kinh_nghiem\": \"...\",\n  \"hanh_vi\": \"...\",\n  \"bai_tap\": \"...\",\n  \"cham_diem\": \"...\",\n  \"cung_cap_tai_lieu\": \"...\",\n  \"kien_thuc\": \"...\",\n  \"chuong_trinh_hoc\": \"...\",\n  \"thiet_bi_day_hoc\": \"...\",\n  \"de_xuat\": \"...\",\n  \"noi_chung\": \"...\",\n  \"conf\": 0.0\n}\n\nInput:\nsentence=\"{{ $json.sentence }}\"\nsentiment=\"{{ $json.sentiment }}\"\ntopic=\"{{ $json.topic }}\""
+        }
+      },
+      "id": "d4b05af1-5860-4699-b45b-c2ebb170847d",
+      "name": "Augment Data with LLM1",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        1120,
+        928
+      ]
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-oss-120b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        848,
+        1120
+      ],
+      "id": "42a70a27-192e-4657-99ac-cf9afc429957",
+      "name": "Groq Chat Model1",
+      "credentials": {
+        "groqApi": {
+          "id": "eiWTJlVqIWkVbhTg",
+          "name": "Groq account 11"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const rawOutput = $input.item.json.output;\nlet augmentedArray;\n\ntry {\n  // Strip markdown code fences if present\n  const cleaned = rawOutput.replace(/```json|```/g, '').trim();\n  augmentedArray = JSON.parse(cleaned);\n} catch(e) {\n  // Fallback: extract array from string\n  const match = rawOutput.match(/\\[.*\\]/s);\n  if (match) {\n    augmentedArray = JSON.parse(match[0]);\n  } else {\n    throw new Error('Cannot parse LLM output: ' + rawOutput);\n  }\n}\n\nreturn [{\n  json: {\n    augmented_sentences: augmentedArray\n  }\n}];"
+      },
+      "id": "b546a39c-acd3-43bc-beb9-f4a23795df11",
+      "name": "Parse JSON Array1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1472,
+        928
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2144,
+        1056
+      ],
+      "id": "7aac3e40-810f-4869-9efb-2e2a63767b42",
+      "name": "Wait1",
+      "webhookId": "07a73a68-a472-4bde-a984-1f653918e213"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1UCynOtL2cN3jC5ODkHkczh0T1esIfiZm4jxDPXwkzVo",
+          "mode": "list",
+          "cachedResultName": "Data_uitnlp/vietnamese_students_feedback",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1UCynOtL2cN3jC5ODkHkczh0T1esIfiZm4jxDPXwkzVo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1058836917,
+          "mode": "list",
+          "cachedResultName": "test",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1UCynOtL2cN3jC5ODkHkczh0T1esIfiZm4jxDPXwkzVo/edit#gid=1058836917"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "row_number": "={{ $('Loop Over Items2').item.json.row_number }}",
+            "json": "={{ $json.augmented_sentences }}",
+            "status": "processed"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "sentence",
+              "displayName": "sentence",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "sentiment",
+              "displayName": "sentiment",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "topic",
+              "displayName": "topic",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "json",
+              "displayName": "json",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "augmented_sentences",
+              "displayName": "augmented_sentences",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1824,
+        960
+      ],
+      "id": "31e44f7d-9d39-436d-9319-e17c7459cb66",
+      "name": "Update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "6dlzTXl0wfsatNY5",
+          "name": "Google Sheets OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "468dea9a-64ef-419f-a278-71d6c26129d8",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "processed",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        784,
+        880
+      ],
+      "id": "6304836d-cb0c-4554-97f6-f9125c139770",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-oss-120b:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        1008,
+        1088
+      ],
+      "id": "cf198596-5402-43bf-8404-6ac31e4a45ba",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "QR0gqSzJYiQODdk8",
+          "name": "OpenRouter account 3"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Start Workflow": {
+      "main": [
+        [
+          {
+            "node": "Read Data from Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Data from Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items2": {
+      "main": [
+        [],
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Augment Data with LLM1": {
+      "main": [
+        [
+          {
+            "node": "Parse JSON Array1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model1": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "Parse JSON Array1": {
+      "main": [
+        [
+          {
+            "node": "Update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Augment Data with LLM1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Augment Data with LLM1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "2d77fa09-2670-4f5b-9e5b-d40735eed0a2",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "6edb89c7cb2efcf2d7133d393399618ce040a52dd96ec3839aea9ab00d0341ae"
+  },
+  "id": "9Kjvwj3BCvEYiBaU",
+  "tags": []
+}
