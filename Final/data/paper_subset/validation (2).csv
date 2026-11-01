@@ -1,0 +1,502 @@
+id,text,sentiment,aspect
+66,thầy tận tình vui tính .,positive,hanh_vi
+125,"lên lớp ai làm việc người ấy , thầy không có giảng gì thêm .",negative,ky_nang_giang_day
+126,"tận tâm , nhiệt tình , quan tâm đến sinh viên .",positive,hanh_vi
+128,dạy quá nhanh .,negative,ky_nang_giang_day
+206,không !,neutral,noi_chung
+276,"đến khi cuối kỳ , chỉ cần sinh viên mắc một sai sót nhỏ thì sẽ rớt môn .",negative,cham_diem
+395,"tuy có phần chém gió kinh điển nhưng kiến thức , hiểu biết rộng , đặc biệt về công nghệ .",positive,kien_thuc
+416,kiến thức giảng dạy môn tiếng anh hầu như không giúp ích nhiều cho sinh viên trong việc tìm hiểu các tài liệu chuyên ngành .,negative,kien_thuc
+524,"thầy dạy nhiệt tình , rất chu đáo .",positive,hanh_vi
+539,"làm tốn thời gian truyền đạt , dẫn đến hứng thú lên lớp nghe giảng bị hạn chế .",negative,ky_nang_giang_day
+583,"giảng viên tận tâm với việc dạy học , tạo cảm hứng học tập cho sinh viên .",positive,hanh_vi
+607,"đó là tiền của họ , họ muốn dùng thì tùy họ , người khác nghèo không phải lỗi của họ , chưa kể tiền thuế họ đóng góp cho nước cũng đủ để gọi là xây dựng rồi .",negative,noi_chung
+630,"các giảng dạy của giảng viên còn khó hiểu , rối rắm .",negative,ky_nang_giang_day
+656,"kiến thức nhiều , khó tiếp thu , phân loại chưa rõ .",negative,kien_thuc
+685,thì có thể lướt nhanh hơn vì phần này khá dễ .,positive,ky_nang_giang_day
+689,"thầy rất nhiệt tình , năng nổ .",positive,hanh_vi
+691,"học thoải mái , ít áp lực .",positive,noi_chung
+720,"giáo viên nhiệt tình , tận tâm giúp đỡ sinh viên .",positive,hanh_vi
+742,"thầy rất tận tình , luôn luôn giúp đỡ , hỗ trợ sinh viên .",positive,hanh_vi
+761,không thực tế .,negative,noi_chung
+768,thầy quá chuyên nghiệp .,positive,ky_nang_giang_day
+783,nhiều hoạt động .,neutral,noi_chung
+788,"ân cần , tận tụy .",positive,hanh_vi
+825,thầy dạy quá tệ .,negative,ky_nang_giang_day
+869,"tiết học vui vẻ , thoải mái .",positive,noi_chung
+897,lên vừa cho học lý thuyết vừa cho thực hành .,positive,chuong_trinh_hoc
+944,"giảng viên nhiệt tình , gần gũi với sinh viên .",positive,hanh_vi
+977,"giảng viên nhiệt tình , quan tâm đến học sinh .",positive,hanh_vi
+1013,như vậy có đảm bảo được chất lượng giảng dạy không .,negative,ky_nang_giang_day
+1078,chu đáo và ân cần .,positive,hanh_vi
+1089,thầy trình bày bài giảng lộn xộn .,negative,ky_nang_giang_day
+1135,tận tình tích cực .,positive,hanh_vi
+1143,thầy lên lớp đúng giờ và đều đặn .,positive,hanh_vi
+1170,dễ chịu .,positive,noi_chung
+1203,slide còn khá khó hiểu .,negative,cung_cap_tai_lieu
+1221,thầy rất tận tình vui vẻ .,positive,hanh_vi
+1228,chưa hiệu quả .,negative,noi_chung
+1230,không mang lại hiệu quả .,negative,noi_chung
+1288,bằng chứng là kỳ thi cuối kỳ điểm trải dài từ 1 - 5 điểm .,neutral,cham_diem
+1298,giáo viên chưa đi sâu vào vấn đề bài học .,negative,ky_nang_giang_day
+1305,"có lẽ vì thế , mà cô cho tụi em đồ án lớn và bài tập theo tuần nữa , nên tụi em khá là căng thẳng , tụi em còn phải làm đồ án của các môn khác nữa .",negative,bai_tap
+1462,ảnh hướng tới kết quả chung của em .,neutral,noi_chung
+1474,em cần phổ biến nhiều thông tin hơn .,neutral,de_xuat
+1553,slide dễ hiểu .,positive,cung_cap_tai_lieu
+1558,"cách thầy giảng dậy rất khoa học , đơn giản dễ hiểu !",positive,ky_nang_giang_day
+1568,nhiệt tình giúp đỡ các bạn sinh viên .,positive,hanh_vi
+1595,"thầy nhiệt tâm , vui tính .",positive,hanh_vi
+1615,chọn thời gian báo cáo phù hợp cho sinh viên .,neutral,de_xuat
+1631,luôn liên hệ thực tiễn .,positive,kinh_nghiem
+1731,"việc truyền đạt kiến thức chưa sâu , em thấy vẫn mông lung sau mỗi tiết học , chỉ hiểu sơ sơ .",negative,ky_nang_giang_day
+1747,không có gì cả ạ .,neutral,noi_chung
+1748,thầy dạy buồn ngủ .,negative,hanh_vi
+1780,tận tâm tận tình .,positive,hanh_vi
+1813,khả năng tương tác chưa tốt .,negative,hanh_vi
+1863,cô nói rất nhỏ .,negative,hanh_vi
+1871,thầy giảng rất hay .,positive,ky_nang_giang_day
+1887,cô tận tình .,positive,hanh_vi
+1911,"cô giảng lý thuyết quá nhanh làm em và nhiều bạn khác không nắm kịp , chủ yếu là về xem lại tài liệu mới hiểu được cơ bản , còn ở trên lớp thì chỉ sơ sơ .",negative,ky_nang_giang_day
+1964,thầy dạy có tâm .,positive,hanh_vi
+1966,chưa thấy giáo viên bao giờ .,negative,hanh_vi
+1999,"chứ như tình trạng hiện tại là môn thực hành học trước , qua kỳ sau mới được học lý thuyết thì mất đi tính tiếp nối kiến thức trong quá trình học .",negative,chuong_trinh_hoc
+100125,ít thực tế .,negative,kinh_nghiem
+100129,em thấy việc này khá bổ ích .,positive,noi_chung
+100135,"giảng dạy dễ hiểu , đầy đủ .",positive,ky_nang_giang_day
+100150,đó là việc giáo viên vừa giảng bài vừa code cho xem dễ hiểu và hình tượng ra những gì giáo viên muốn truyền đạt !,positive,ky_nang_giang_day
+100153,cô giảng bài cụ thể .,positive,ky_nang_giang_day
+100158,"cô nhiệt tình giảng dạy , vui tính , dễ chịu với sinh viên .",positive,hanh_vi
+100177,điểm quá trình chưa thật sự công bằng với sinh viên .,negative,cham_diem
+100242,dễ thương coloncontemn .,positive,noi_chung
+100275,không thấy không hài lòng về giảng viên .,neutral,hanh_vi
+100280,sửa bài cho sinh viên giúp sinh viên tiến bộ .,positive,hanh_vi
+100370,"thầy tận tình , nhiệt huyết .",positive,hanh_vi
+100382,"nghỉ nhiều , khả năng truyền đạt chưa cao , chưa thực sự làm môn học thu hút .",negative,ky_nang_giang_day
+100416,"nhiệt tình , hiểu học sinh .",positive,hanh_vi
+100471,giáo viên không đến lớp trong các buổi thực hành nhưng không báo trước .,negative,hanh_vi
+100515,bù lại cách chấm điểm sẽ đặt nặng phần hiểu vấn đề hơn như thầy wzjwz119 đã từng trình bày .,neutral,cham_diem
+100589,sự tận tâm của giảng viên .,positive,hanh_vi
+100618,vui tánh .,positive,noi_chung
+100699,quá nhiều kiến thức để nhớ .,negative,kien_thuc
+100716,"học bù cũng không hỏi ý kiến sinh viên có trùng với môn khác không , học bù lại còn điểm danh .",negative,chuong_trinh_hoc
+100717,giảng hay minh họa sinh động .,positive,ky_nang_giang_day
+100780,"giáo viên tâm huyết , nhiệt tình .",positive,hanh_vi
+100805,đôi lúc sợ sợ thầy colonsad .,negative,hanh_vi
+100856,chưa tốt về mặt kiến thức .,negative,kien_thuc
+100897,thầy wzjwz263 dạy tận tâm lắm .,positive,hanh_vi
+100941,cần hướng dẫn sinh viên ôn tập .,neutral,de_xuat
+100956,"nhiệt tình , luôn giúp đỡ sinh viên khi sinh viên có thắc mắc .",positive,hanh_vi
+100966,giảng viên tận tâm nhiệt tình !,positive,hanh_vi
+100969,nên có nhiều tiết thực hành hơn .,neutral,de_xuat
+101031,"bước vào lớp học cứ như "" đi nhầm lớp "" .",neutral,noi_chung
+101060,có các phương pháp dạy tốt .,positive,ky_nang_giang_day
+101112,cho những bài tập bổ ích giúp sinh viên nắm rõ được kiến thức của môn học .,positive,bai_tap
+101182,chưa hài lòng .,negative,noi_chung
+101208,"thầy nhiệt tình , tận tụy , vui vẻ .",positive,hanh_vi
+101221,thầy giảng dạy nhiệt tình và vui tính .,positive,hanh_vi
+101258,thầy dạy hơi gây buồn ngủ .,negative,ky_nang_giang_day
+101299,thầy giảng bài tập chưa hay .,negative,ky_nang_giang_day
+101318,tệ .,negative,noi_chung
+101361,và quá gấp gáp .,negative,noi_chung
+101426,tuyệt !,positive,noi_chung
+101429,"thầy dạy hay , giảng bài dễ hiểu .",positive,ky_nang_giang_day
+101435,không đồng bộ kiến thức với giáo viên lý thuyết .,negative,kien_thuc
+101448,nếu như thế thì giáo viên lý thuyết có thể đưa bài thực hành cho sinh viên làm mà không cần đến giảng viên thực hành .,neutral,de_xuat
+101453,có nhiều bài nói hay .,positive,ky_nang_giang_day
+101483,có nhiều ví dụ minh họa dễ hiểu .,positive,kinh_nghiem
+101491,đem lại nhiều kiến thức qua môn học .,positive,kien_thuc
+101507,không đánh giá đúng khả năng của học sinh .,negative,cham_diem
+101530,cách thức truyền đạt của giáo viên .,neutral,ky_nang_giang_day
+101552,giảng viên có tương tác với giáo viên .,positive,hanh_vi
+101614,thời gian tăng từ 4 tiết lên đến 5 tiết khiến sinh viên mệt mỏi và thiếu tập trung ở cuối giờ học .,negative,chuong_trinh_hoc
+101635,nên bổ xung phần thực hành !,neutral,de_xuat
+101643,ít bài tập cho sinh viên .,negative,bai_tap
+101665,nhiều việc cần xử lý .,neutral,noi_chung
+101672,nghỉ và học bù hơi nhiều .,negative,noi_chung
+101678,chưa gặp lần nào .,neutral,noi_chung
+101700,"tinh thần trách nhiệm , nhiệt huyết , vui vẻ hòa đồng với sinh viên .",positive,hanh_vi
+101707,điểm danh nhiều quá .,negative,noi_chung
+101795,"giáo viên nhiệt tình , tận tâm , lên lớp đúng giờ .",positive,hanh_vi
+101826,"giảng chậm , chi tiết , dễ hiểu .",positive,ky_nang_giang_day
+101832,giảng viên đưa ra nhiều dạng bài tập giúp học sinh hiểu rõ hơn .,positive,bai_tap
+101835,cô nói nhỏ và rất đều rất dễ buồn ngủ .,negative,ky_nang_giang_day
+101880,chưa nói rõ để sinh viên có thể hiểu rõ .,negative,ky_nang_giang_day
+101888,"thầy tận tâm , nhiệt tình giúp đỡ , giải đáp thắc mắc cho sinh viên .",positive,hanh_vi
+101918,sinh viên quá đông gây nóng nực .,negative,noi_chung
+101919,dạy cụ thể từng bài tập .,neutral,ky_nang_giang_day
+101924,cô dạy rất hiệu quả .,positive,ky_nang_giang_day
+101936,chưa quan tâm tới những sinh viên còn yếu .,negative,hanh_vi
+101950,lên được 1 buổi .,negative,noi_chung
+101964,"cô dạy nhiệt tình , vui vẻ .",positive,hanh_vi
+200051,"thưa , em thực sự rất hài lòng về mức độ bài giảng .",positive,ky_nang_giang_day
+200057,nhiều khi cô giảng hơi nhanh .,negative,ky_nang_giang_day
+200076,cố rất nhiệt tình .,positive,hanh_vi
+200101,khả năng truyền tải kiến thức .,neutral,ky_nang_giang_day
+200132,"không ý kiến , phương pháp của thấy rất hài lòng ạ .",positive,ky_nang_giang_day
+200221,em nghĩ là cô truyền cảm hứng rất hay .,positive,hanh_vi
+200240,"dạy ít , sinh viên chủ yếu nghe sinh viên báo cáo .",negative,ky_nang_giang_day
+200269,hình dung chưa ?,neutral,noi_chung
+200459,cô truyền đạt còn khó hiểu .,negative,ky_nang_giang_day
+200520,thầy không chú trọng đến kết quả tốt hay không mà khuyến khích sinh viên làm việc hết khả năng của mình .,positive,hanh_vi
+200553,chúc thầy tràn đầy sức khỏe và giảng dạy thật tốt trong các kỳ tiếp theo !,positive,ky_nang_giang_day
+200651,"giảng viên nhiệt tình , sửa lỗi cho sinh viên .",positive,hanh_vi
+200693,"thầy wzjwz274 dạy cho hoàn thành việc dạy , không quan tâm những con người đang ngồi dưới lớp của thầy có hiểu hay không .",negative,hanh_vi
+200701,không phát huy được hết khả năng của sinh viên .,negative,ky_nang_giang_day
+200712,"dể gần , tạo tình cảm tốt .",positive,hanh_vi
+200756,cám ơn thầy .,positive,noi_chung
+200763,thầy giáo nhiệt tình .,positive,hanh_vi
+200826,tài liệu cho môn học còn hạn chế .,negative,cung_cap_tai_lieu
+200836,giảng viên nhiệt tình .,positive,hanh_vi
+200856,tài liệu giảng viên cung cấp đầy đủ .,positive,cung_cap_tai_lieu
+200874,đó là sự nhiệt tình của giảng viên .,positive,hanh_vi
+200878,sự tận tình giảng dạy tận tình .,positive,hanh_vi
+200880,cô nhiệt tình và tâm huyết trong việc dạy học .,positive,hanh_vi
+200907,"đảm bảo giờ học , tiết học , nội dung .",neutral,noi_chung
+200914,các ví dụ đều có liên hệ đến bài tập .,positive,kinh_nghiem
+200923,thầy có hướng dẫn cho sinh viên tốt .,positive,ky_nang_giang_day
+200943,ra bài tập rất hay .,positive,bai_tap
+200997,sự nhiệt tình giải đáp mọi thắc mắc của sinh viên .,positive,hanh_vi
+201053,có nhiều hoạt động giúp sinh viên nâng cao kỹ năng .,positive,kinh_nghiem
+201075,cô dạy nhiệt tình dễ hiểu .,positive,ky_nang_giang_day
+201076,nếu cho được điểm 11 thì em cũng cho luôn .,neutral,noi_chung
+201087,tốn thời gian .,negative,noi_chung
+201122,"phân chia nhóm hợp lý , theo sát quá trình thực hành của sinh viên .",positive,chuong_trinh_hoc
+201210,thêm giờ thực hành .,neutral,de_xuat
+201229,cách tiếp cận nội dung chưa tốt .,negative,ky_nang_giang_day
+201233,tăng cường buổi học .,neutral,de_xuat
+201246,điểm quá trình chưa đánh giá đúng .,negative,cham_diem
+201313,giảng viên không dành nhiều thời gian ôn tập cho sinh viên .,negative,hanh_vi
+201318,"tận tình , thân thiện .",positive,hanh_vi
+201321,"thầy truyền đạt dễ hiểu , dễ nhớ .",positive,ky_nang_giang_day
+201333,thầy luôn khuyến khích tính tự lập và sự thực tế trong công việc .,positive,hanh_vi
+201344,giảng viên còn nói nhiều chuyện ngoài lề .,negative,hanh_vi
+201356,giờ học bắt đầu muộn !,negative,noi_chung
+201366,giáo trình có vẻ cứng nhắc khó tiếp thu gây chán nản .,negative,cung_cap_tai_lieu
+201410,"hình thức đánh giá , chấm điểm giữa các nhóm , đánh giá bản thân , nhóm khách hàng .",neutral,cham_diem
+201424,cho bài tập về nhà để học sinh làm thêm .,neutral,bai_tap
+201435,tăng cường cập nhập kiến thức mới .,neutral,de_xuat
+201467,giáo viên giảng bài dễ hiểu .,positive,ky_nang_giang_day
+201618,"giảng viên vui tính , dễ chịu .",positive,hanh_vi
+201649,thầy tránh phương pháp đưa công thức và đưa các ví dụ sinh động .,positive,ky_nang_giang_day
+201669,giảng viên trên lớp liên hệ thực tế quá nhiều .,negative,kinh_nghiem
+201765,"cô rất nhiệt tình , tâm lý với sinh viên .",positive,hanh_vi
+201786,"khả năng truyền đạt kiến thức chưa cao , nhiều sinh viên khó hiểu .",negative,ky_nang_giang_day
+201803,"thầy giảng hơi khó hiểu , phức tạp hóa vấn đề , hơi chậm .",negative,ky_nang_giang_day
+201807,ít vận dụng nhiều vào thực tiễn .,negative,kinh_nghiem
+201816,thầy dạy tâm huyết .,positive,hanh_vi
+201828,có chia sẻ phương pháp học cho sinh viên .,neutral,ky_nang_giang_day
+201858,khả năng truyền đạt kiến thức sinh viên khó tiếp thu hết .,negative,ky_nang_giang_day
+201917,không có bài giảng trên moodle .,negative,cung_cap_tai_lieu
+201974,tập trung vào giải thích vài kiến thức cơ bản .,neutral,ky_nang_giang_day
+201981,giảng viên có việc bận cho nghỉ nhiều .,negative,hanh_vi
+300001,dạy rất có tâm .,positive,hanh_vi
+300101,"tận tâm , nhiệt tình .",positive,hanh_vi
+300137,slide còn khó hiểu .,negative,cung_cap_tai_lieu
+300141,"cô dạy hay , truyền đạt cũng tốt .",positive,ky_nang_giang_day
+300153,thầy dạy rất dễ hiểu và hài hước .,positive,ky_nang_giang_day
+300173,"kiến thức trải dài , không tập trung .",negative,kien_thuc
+300201,"không thông báo cho sinh viên , sinh viên nhiều lần lên trường rồi lại về dot mất thời gian !",negative,hanh_vi
+300241,kiến thức cao .,positive,kien_thuc
+300247,có những câu chuyện thực tế về môn học giúp buổi học đỡ căng thẳng cũng như có cách nhìn trực quan hơn .,positive,kinh_nghiem
+300278,cung cấp kiến thức đầy đủ .,positive,kien_thuc
+300317,cách truyền đạt của giảng viên không được thu hút sinh viên lắm ạ .,negative,ky_nang_giang_day
+300320,"bài giảng thu hút , dễ hiểu .",positive,ky_nang_giang_day
+300392,nhập tâm .,neutral,noi_chung
+300406,giảng viên còn vắng nhiều buổi và thông báo vắng chưa hợp lý .,negative,hanh_vi
+300410,"thầy có hơi khó khăn trong phần điểm danh , vài lần em vào trễ nhưng không được thầy điểm danh .",negative,hanh_vi
+300412,"giờ thực hành hầu như không dạy được gì , nên lúc đầu em thường ra sớm và sau đó không vào lớp thực hành .",negative,kinh_nghiem
+300453,thái độ hơi khó chịu với sinh viên .,negative,hanh_vi
+300467,giảng dạy dễ hiểu và tích cực trong tiết học .,positive,ky_nang_giang_day
+300477,"giảng dạy dễ hiểu , linh hoạt .",positive,ky_nang_giang_day
+300524,giảng viên thân thiện .,positive,hanh_vi
+300525,dạy không liên quan .,negative,kien_thuc
+300598,giảng viên nghỉ nhiều .,negative,hanh_vi
+300620,"tâm huyến , muốn truyền đạt hết kiến thức cho sinh viên .",positive,hanh_vi
+300756,"thầy dạy rất nhiệt tình , rất mong thầy tiếp tục công tác tại trường .",positive,hanh_vi
+300757,"bài giảng dài , không quá hứng thú cho sinh viên để học .",negative,ky_nang_giang_day
+300767,giảng viên giảng dạy tân tâm .,positive,hanh_vi
+300799,cô rất vui vẻ và nhiệt tình .,positive,hanh_vi
+300859,"thầy thoải mái , thân thiện .",positive,hanh_vi
+300898,hệ thống giảng dạy trên wecode dễ hiểu .,positive,ky_nang_giang_day
+300900,phương pháp giảng dạy hay và dễ hiểu .,positive,ky_nang_giang_day
+300954,giảng viên giảng nhiệt tình .,positive,hanh_vi
+301037,"nhiệt tình , nhanh nhẹn , thân thiện .",positive,hanh_vi
+301094,sẵn sàng trả lời mọi thắc mắc của sinh viên .,positive,hanh_vi
+301165,em cảm ơn !,positive,noi_chung
+301221,lớp ít người nên học thoải mái .,positive,thiet_bi_day_hoc
+301231,cách truyền đạt hay và cuốn hút .,positive,ky_nang_giang_day
+301259,"thầy dạy vui tính , hứng thú trong học tập .",positive,hanh_vi
+301261,thầy thường xuyên không lên lớp vào tiết dạy !,negative,hanh_vi
+301266,thầy chỉ quan tâm vào đề thi và chạy theo thành tích .,negative,hanh_vi
+301269,và cần có thêm những lưu ý cho học sinh .,neutral,de_xuat
+301271,thầy rất nhiệt tình và tân tâm với sinh viên .,positive,hanh_vi
+301288,thầy nhiệt tình giúp đỡ sinh viên .,positive,hanh_vi
+301310,về trễ .,negative,hanh_vi
+301377,"đúng chất "" anh "" thầy .",positive,hanh_vi
+301386,thầy rất ân cần rất tâm huyết với môn học .,positive,hanh_vi
+301408,cô dạy liên hệ thực tế .,positive,kinh_nghiem
+301427,"giảng viên nhiệt tình , hay sửa lỗi cho sinh viên .",positive,hanh_vi
+301455,các tiết học của cô rất sôi động và làm em rất hài lòng với khả năng giảng dạy của cô .,positive,ky_nang_giang_day
+301465,thầy hài hước vui vẻ nhiệt tình .,positive,hanh_vi
+301576,thầy dạy mọi thứ đều ok hết ạ .,positive,ky_nang_giang_day
+301580,không hỗ trợ nhiệt tình .,negative,hanh_vi
+301604,"tài liệu , nội dung bài học thầy wzjwz197 cung cấp đầy đủ , chi tiết .",positive,cung_cap_tai_lieu
+301606,"thì rất thoải mái , dễ gần gũi , hay cười .",positive,hanh_vi
+301612,cô dạy không có điểm nhấn cứ đều đều cho đến hết buổi .,negative,ky_nang_giang_day
+301640,quá tập trung vào slide .,negative,ky_nang_giang_day
+301760,cô dạy khó hiểu .,negative,ky_nang_giang_day
+301773,thầy không khắt khe với sinh viên .,negative,hanh_vi
+301861,"thầy dạy truyền đạt tốt , dễ hiểu .",positive,ky_nang_giang_day
+301892,thầy nhiệt tình không gây buồn chán khi học .,positive,hanh_vi
+301920,một số phần thầy chưa nói rõ gây khó khăn cho việc tìm hiểu .,negative,ky_nang_giang_day
+301950,chứ em thấy đa số các bạn đều chọn chuyên ngành máy học bên kia .,neutral,noi_chung
+301976,cách dạy để sinh viên tiếp thu bài tương đối có hiệu quả .,positive,ky_nang_giang_day
+301987,"hôm đó là hôm duy nhất em nghĩ và thế là 0 điểm quá trình , rõ là chuyện này không hề hợp lý .",negative,cham_diem
+301988,cho về sớm .,neutral,de_xuat
+400001,"đối với em , em đã thấy hợp lý .",neutral,noi_chung
+400048,giảng viên hòa đồng .,positive,hanh_vi
+400079,"giảng viên sắp xếp lịch ở nhiều tiết không phù hợp ( tiết 2 - 3 , 3 - 4 , dot ) khiến rất nhiều sinh viên không tham gia được .",negative,chuong_trinh_hoc
+400154,cảm ơn thầy rất nhiều !,positive,hanh_vi
+400161,"đồng ý là sinh viên thì tự học là chính , giảng viên là người hướng dẫn , nhưng mà tại lớp này giảng viên chẳng hướng dẫn được gì , cứ thao thao bất tuyệt đọc slide trên lớp xong về việc này tự sinh viên chúng em cũng làm được , giảng dạy kho hiểu , khô khan , demo không rõ ràng .",negative,ky_nang_giang_day
+400216,"nhiệt tình , tâm lý .",positive,hanh_vi
+400217,"thầy dạy chi tiết , kỹ càng .",positive,ky_nang_giang_day
+400261,phong cách thầy rất giống wzjwz225 .,neutral,ky_nang_giang_day
+400302,nhận lương thì phải làm tốt bổn phận của một người thầy chứ ạ .,negative,hanh_vi
+400402,cô rất vui tính và nhiệt tình .,positive,hanh_vi
+400431,"điểm danh , làm bài kiểm tra thường xuyên trong các buổi học .",neutral,cham_diem
+400470,thầy và cô thường có những lời khuyên định hướng tương lai .,positive,hanh_vi
+400526,không hướng dẫn nhiều về môn học cho sinh viên .,negative,ky_nang_giang_day
+400545,khả năng truyền đạt kiến thức rất tốt .,positive,ky_nang_giang_day
+400548,"cách chấm điểm quá trình của thầy quá gắt , nhiều bạn bị kéo điểm nặng nề .",negative,cham_diem
+400555,cô dạy nhiệt tình và tâm huyết .,positive,hanh_vi
+400649,cô nói chậm chậm chút để sinh viên dễ tiếp thu kịp .,positive,ky_nang_giang_day
+400679,"thầy dạy tốt , truyền đạt dễ hiểu .",positive,ky_nang_giang_day
+400747,không cho học sinh hiểu sâu vấn đề .,negative,ky_nang_giang_day
+400800,cách giảng dạy chưa thực sự gây hứng thú cho sinh viên .,negative,ky_nang_giang_day
+400826,tận tâm chỉ dạy .,positive,hanh_vi
+400858,thầy cho bài tập hơi khó .,negative,bai_tap
+400864,cảm ơn thầy !,positive,noi_chung
+400892,"vậy thì em ở nhà làm bài , rồi mail cho thầy hỏi cũng được , nhọc công đi 20 km lên trường làm gì ?",neutral,de_xuat
+400957,"thân thiện , nhiệt tình với sinh viên .",positive,hanh_vi
+400959,thầy giảng nhiệt tình .,positive,hanh_vi
+401003,"thầy giảng bài bằng một âm thanh đều đều và hơi nhỏ , dẫn tới việc không nghe được và không hiểu bài .",negative,ky_nang_giang_day
+401040,em xin hết ạ !,neutral,noi_chung
+401117,"giáo viên thân thiện , nhiệt huyết .",positive,hanh_vi
+401129,cô rất tận tâm .,positive,hanh_vi
+401146,đôi khi hơi dài dòng .,negative,ky_nang_giang_day
+401186,nhưng nhiều lúc thầy quá khó tính .,negative,hanh_vi
+401195,học cô có động lực ghê .,positive,hanh_vi
+401304,cô dạy rất tận tậm và yêu mến học sinh .,positive,hanh_vi
+401356,giảng viên dạy trọng tâm môn học .,neutral,ky_nang_giang_day
+401365,slide khi khó hiểu vì vậy khi kết hợp slide và nghe cô giảng mới hiểu .,negative,cung_cap_tai_lieu
+401396,"sự nhiệt huyết , và tận tâm .",positive,hanh_vi
+401410,"vui vẻ , khá chăm lo cho sinh viên .",positive,hanh_vi
+401420,thầy dạy quá tốt không ý kiến .,positive,ky_nang_giang_day
+401432,"thầy đẹp trai quá , làm sinh viên mất tập trung !",negative,hanh_vi
+401441,cô nhiệt tình giảng dạy dù lúc cô hỏi không bạn nào thèm trả lời câu hỏi của cô .,positive,hanh_vi
+401448,giảng viên dạy khó hiểu .,negative,ky_nang_giang_day
+401454,thầy nói chuyện linh tinh hơi nhiều .,negative,hanh_vi
+401457,cô rất nhiệt tình .,positive,hanh_vi
+401504,giáo viên nói tiếng hơi khó nghe .,negative,ky_nang_giang_day
+401505,thầy nhiệt tình tận tâm .,positive,hanh_vi
+401538,hy vọng trường xem xét ý kiến này của em !,neutral,de_xuat
+401623,"thầy tận tâm , hỗ trợ tận tình cho các bạn sinh viên .",positive,hanh_vi
+401632,đôi khi nên tổ chức các trò chơi để sinh viên giảm căng thẳng .,neutral,de_xuat
+401637,khả năng truyền tốt không gây hứng thú cho sinh viên .,negative,ky_nang_giang_day
+401741,"dạy kỹ , sát với đề thi .",positive,ky_nang_giang_day
+401752,mong phòng đào tạo trong tương lai sắp xếp cho thầy wzjwz128 dạy lớp em bất cứ môn nào thầy có thể .,neutral,de_xuat
+401777,"phải nói một câu là doubledot "" sao thầy thắc mắc nhiều vậy thầy ? "" , mới đầu em cũng hơi sợ dot em còn chưa hiểu cái môn học gì .",negative,ky_nang_giang_day
+401810,"thầy dạy nói rất nhanh , khó hiểu .",negative,ky_nang_giang_day
+401830,"cô tạo được một không khí gần gũi , không áp lực , học rất thoải mái .",positive,hanh_vi
+401851,thầy wzjwz60 là một giảng viên rất tận tâm và yêu nghề !,positive,hanh_vi
+401960,thầy hơi bận .,negative,hanh_vi
+500084,cô cung cấp nhiều thông tin thực tế .,positive,kinh_nghiem
+500109,thầy giảng chưa sâu !,negative,ky_nang_giang_day
+500177,sự nhiệt tình của giảng viên .,positive,hanh_vi
+500185,thầy thường xuyên nghỉ .,negative,hanh_vi
+500191,"đổi phòng thực hành , máy thực hành bị hư rất nhiều .",negative,thiet_bi_day_hoc
+500208,giọng nói .,neutral,noi_chung
+500230,thầy có phần hơi dễ tính .,positive,hanh_vi
+500232,thầy chưa hướng dẫn chi tiết .,negative,ky_nang_giang_day
+500245,em cảm thấy nó rất hữu ích cho chúng em sau này .,positive,noi_chung
+500290,cô đi sớm về muộn .,positive,hanh_vi
+500302,"giảng viên dạy sai kiến thức về fork , giải thuật round robin , bài tập về chiến lược placement .",negative,kien_thuc
+500450,thầy có kiến thức rất rộng và dạy nhiều kiến thức hay .,positive,kien_thuc
+500534,thầy cứ mặc định học sinh thông minh .,negative,hanh_vi
+500586,đã rất tốt .,positive,noi_chung
+500607,"bài tập đa dạng , mức độ khó dễ khác nhau .",neutral,bai_tap
+500641,"các ví dụ về định nghĩa , giao thức , tổ chức mạng của thầy rất gần gũi và dễ hiểu .",positive,ky_nang_giang_day
+500652,"cho nghiên cứu nhiều đề tài khoa học hay , bổ ích .",positive,kinh_nghiem
+500655,cách này không phù hợp với môn học .,negative,ky_nang_giang_day
+500692,đảm bảo thời gian .,neutral,noi_chung
+500694,cho làm bài kiểm tra thử trước khi thi .,neutral,de_xuat
+500713,giúp cho sinh viên trao dồi thêm rất nhiều kỹ năng đặc biệt là kỹ năng làm việc nhóm .,positive,kinh_nghiem
+500742,"giảng viên dạy nhiệt tình , tận tâm .",positive,hanh_vi
+500746,giáo viên phân bố thời gian dạy không rõ ràng .,negative,ky_nang_giang_day
+500752,thời gian giải bài tập với sinh viên chưa nhiều .,negative,bai_tap
+500806,"cô dạy rất nhiệt tình , rất hài lòng về cô .",positive,hanh_vi
+500817,cuối cùng chúc cô wzjwz2 có năm mới hạnh phúc !,neutral,noi_chung
+500824,chuyện gì dễ thì cô dễ mà chuyện gì khó thì cô khó .,negative,ky_nang_giang_day
+500895,slide giảng dạy đầy đủ và trực quan .,positive,cung_cap_tai_lieu
+500913,giảng viên giảng bài ngắn gọn dễ hiểu .,positive,ky_nang_giang_day
+500919,nhiều khi thầy băn khoăn rất lâu ở phần mô hình er .,negative,ky_nang_giang_day
+500933,giới thiệu chuyên sâu về kiến thức cơ sở dữ liệu .,positive,kien_thuc
+500959,nên học sinh rất khó tiếp thu .,negative,ky_nang_giang_day
+501009,"giáo viên dễ , nói chuyện vui .",positive,hanh_vi
+501037,"cô quá nhiệt tình , thầy cô dạy mà đáng thương quá !",positive,hanh_vi
+501070,thầy cho bài tập quá ít .,negative,bai_tap
+501093,giảng viên lý thuyết và thực hành rất nhiệt tình với sinh viên .,positive,hanh_vi
+501097,cái máy chiếu ở giảng đường 3 quá mờ .,negative,thiet_bi_day_hoc
+501114,"thầy hay đi trễ , nghỉ nên thời gian trên lớp rất ít .",negative,hanh_vi
+501123,những gì thầy cô cung cấp hầu như trên google đều có .,neutral,cung_cap_tai_lieu
+501205,bài tập cho nhiều mà giải ít .,negative,bai_tap
+501207,"trong bài thực hành thì có hướng dẫn làm , đọc cũng có thể làm được .",positive,bai_tap
+501283,giảng viên nhiệt tình và quan tâm kiến thức của sinh viên .,positive,hanh_vi
+501301,một số bài cô giảng khó hiểu .,negative,ky_nang_giang_day
+501307,tận tậm và hòa đồng .,positive,hanh_vi
+501314,giảng viên ưu tiên nữ sinh hơn nam sinh nhiều .,negative,hanh_vi
+501336,thầy dạy nhiệt tình và lên lớp đúng giờ .,positive,hanh_vi
+600053,"đề cập về tính thực tế , liên quan của hệ thống kiến thức .",positive,kien_thuc
+600211,thầy dạy rất dễ hiểu .,positive,ky_nang_giang_day
+600229,"giảng viên tận tâm , nhiệt tình , vui vẻ .",positive,hanh_vi
+600299,do học khoa khác nên dạy không theo kịp tiếng độ của chương trình .,negative,ky_nang_giang_day
+600479,giúp nâng cao kiến thức .,positive,kien_thuc
+600495,"vui vẻ , tận tình giải đáp thắc mắc .",positive,hanh_vi
+600501,nói chuyện điện thoại nhiều hơn giảng dạy .,negative,hanh_vi
+600509,"có bài thì một tuần deadline , có bài thì cả tháng mới deadline , có tuần thì deadline ba bài cùng lúc .",negative,bai_tap
+600514,"cô dạy vui vẻ , thân thiện với sinh viên .",positive,hanh_vi
+600626,"thầy rất nhiệt tình giảng dạy , cho dù ít sinh viên .",positive,hanh_vi
+600659,rất dễ hiểu .,positive,ky_nang_giang_day
+600718,giáo viên tận tình mặc dù nhiều sinh viên còn lơ là .,positive,hanh_vi
+600722,thầy dạy đủ để thi .,positive,ky_nang_giang_day
+600782,cách truyền đạt của cô khá khó hiểu .,negative,ky_nang_giang_day
+600796,"tận tâm , kỹ lưỡng .",positive,noi_chung
+600821,hỗ trợ nhiều bài tập giúp nâng cao trình độ .,positive,bai_tap
+600879,giảng viên giảng dạy khá nhanh khiền nhiều sinh viên không theo kịp đặc biệt là phần lý thuyết .,negative,ky_nang_giang_day
+600996,khó tiếp thu .,negative,ky_nang_giang_day
+601028,"vui vẻ , nhiệt tình , tận tụy .",positive,hanh_vi
+601040,thầy cho thuyết trình làm đồ án theo nhóm nên giúp em có khả nang truyền đạt kỹ năng work group nâng cao .,positive,ky_nang_giang_day
+601064,cô nhiệt tình giải đáp thắc mắc cho sinh viên .,positive,hanh_vi
+601073,vấn đề nghe từ thiết bị không tốt lắm .,negative,thiet_bi_day_hoc
+601084,"cô nói hơi dài dòng , đôi chỗ hơi khó hiểu .",negative,ky_nang_giang_day
+601091,thầy vô cùng hài hước tạo không khí lớp học vui vẻ cho sinh viên .,positive,hanh_vi
+601137,giảng viên tận tâm nhiệt tình .,positive,hanh_vi
+601168,mong thầy sử dụng micro .,neutral,de_xuat
+601174,"có cảm giác hà khắc , khá khó chịu .",negative,noi_chung
+601176,"thầy chăm lên lớp giảng dạy , tận tình .",positive,hanh_vi
+601205,thầy hiền dễ tính .,positive,hanh_vi
+601282,tuyệt vời .,positive,noi_chung
+601355,quá trình thầy giảng dạy thì hầu hết bọn em chỉ lên nghe thầy nói kiểu nước đổ đầu vịt .,negative,ky_nang_giang_day
+601359,khả năng diễn đạt bằng tiếng anh thực sự không tốt lắm .,negative,ky_nang_giang_day
+601372,"cô rất vui vẻ , tâm huyết nhiệt tình .",positive,hanh_vi
+601378,"vui , nhiệt tình .",positive,hanh_vi
+601381,không có tài liệu học tập .,negative,cung_cap_tai_lieu
+601406,thường xuyên trễ 15 - 30 phút .,negative,hanh_vi
+601436,"chi tiết , dễ hiểu .",positive,noi_chung
+601499,phản hồi nhanh các thắc mắc của sinh viên .,positive,hanh_vi
+601503,"dạy tận tâm , nhiệt tình .",positive,hanh_vi
+601552,"giảng viên nhiệt tình , vui tính , có tâm .",positive,hanh_vi
+700034,không nhiệt tình chỉ dẫn và luôn gây khó khăn cho sinh viên .,negative,hanh_vi
+700089,thầy cho bài tập ít quá .,negative,bai_tap
+700101,bài giảng hay và dễ hiểu .,positive,ky_nang_giang_day
+700102,thầy truyền đạt tốt .,positive,ky_nang_giang_day
+700119,phương pháp học áp dụng thực tiễn .,positive,ky_nang_giang_day
+700204,giảng bài hơi khó hiểu với lại quá nhanh .,negative,ky_nang_giang_day
+700208,"em cực kỳ thích thầy wzjwz240 , thầy tận tâm , thương học sinh , thầy  là số một .",positive,hanh_vi
+700297,tận tình giúp đỡ sinh viên .,positive,hanh_vi
+700363,cô cho em 10 điểm thực hành colonlove .,neutral,cham_diem
+700400,làm việc nhóm .,neutral,noi_chung
+700442,đảm bảo chất lượng tốt .,positive,noi_chung
+700475,cần điều chỉnh số lượng sinh viên hợp lý trong lớp học bởi trong lớp khá đông .,negative,de_xuat
+700564,"cô tận tâm , có theo dõi sức học tập của từng bạn .",positive,hanh_vi
+700591,"thầy khá vui tính , gần gũi với sinh viên , nhiệt tình .",positive,hanh_vi
+700630,"thầy vui vẻ , hòa đồng , tận tâm .",positive,hanh_vi
+700656,thầy là giáo viên tận tâm nhất từ khi em bước vào đại học .,positive,hanh_vi
+700657,nên nâng cao hơn .,negative,de_xuat
+700673,thầy luôn đến lớp đúng giờ và giảng dạy nhiệt tình .,positive,hanh_vi
+700704,giáo viên chỉ dẫn rất nhiệt tình .,positive,hanh_vi
+700765,"giáo viên thực hành wzjwz215 thường xuyên đi trễ ( 30 đến 45 phút ) và hay cho nghĩ vào giờ chót , có 2 bữa cho nghĩ mà không báo trước .",negative,hanh_vi
+700778,đòi hỏi quá cao .,negative,chuong_trinh_hoc
+700789,đó là điều mà em mong muốn mỗi khi đến lớp .,positive,noi_chung
+700792,thầy có kiến thức quá tuyệt vời .,positive,kien_thuc
+700834,nhiệt tình và đúng giờ .,positive,hanh_vi
+700920,truyền đạt tốt .,positive,ky_nang_giang_day
+700937,sự tận tâm của giảng viên đối với sinh viên .,positive,hanh_vi
+700948,giọng nói khó nghe .,negative,ky_nang_giang_day
+700951,"giảng viên nhiệt tình , thân thiện với sinh viên .",positive,hanh_vi
+701012,giảng viên dạy luôn đúng giờ .,positive,hanh_vi
+701055,giọng đọc tương đối giống bản ngữ và phát âm tiếng anh khá chuẩn .,positive,ky_nang_giang_day
+701067,thầy hướng dẫn sinh viên cách tư duy để giải quyết vấn đề .,positive,ky_nang_giang_day
+701069,sinh viên không hiểu lắm .,negative,ky_nang_giang_day
+701075,"cách dạy sinh động , không máy móc .",positive,ky_nang_giang_day
+701146,lớp quá đông nên khó tiếp thu .,negative,ky_nang_giang_day
+701206,dành nhiều thời gian trên lớp để chép bài lên bảng .,negative,ky_nang_giang_day
+701238,"thầy rất tận tâm và nhiệt tình , luôn giải đáp chi tiết các thắc mắc của sinh viên .",positive,hanh_vi
+701242,"thầy dạy rất nhiệt tình và tận tâm , quan tâm nhiều đến học sinh .",positive,hanh_vi
+701249,cô giáo rất nhiệt tình và tận tâm !,positive,hanh_vi
+701253,tuy vậy thầy up slide rất chậm .,negative,cung_cap_tai_lieu
+701296,dạy nhiệt tình và vui vẻ .,positive,hanh_vi
+701318,"thuyết trình còn hơi buồn ngủ , chưa hấp dẩn lắm .",negative,ky_nang_giang_day
+701349,hạn chế bỏ giờ buổi vì giảng viên bận .,negative,hanh_vi
+701363,học vậy đâu phải là học .,negative,noi_chung
+701388,giảng viên sử dụng giờ lên lớp hiệu quả .,positive,ky_nang_giang_day
+701390,"thầy rất nhiệt tình , trong quá trình dạy .",positive,hanh_vi
+701398,hy vọng học kỳ sau có thể học với cô .,neutral,de_xuat
+701425,chưa nhiệt tình dạy .,negative,hanh_vi
+701479,"thầy vui tính , hòa đồng .",positive,hanh_vi
+701480,truyền đạt không dễ hiểu .,negative,ky_nang_giang_day
+701491,"thầy rất hiền , thân thiện và cố gắng giảng .",positive,hanh_vi
+701512,"phòng máy không đảm bảo , nhiều máy bị hư , các bạn sinh viên phải mang laptop theo , rất cực .",negative,thiet_bi_day_hoc
+701529,"phòng thực hành wzjwz34 có máy lạnh hư , dẫn tới trong phòng đôi khi rất nóng , phòng có trang bị bảng sử dụng bút lông nhưng bút lông luôn hết mực khi giảng viên cần sử dụng gây khó khăn trong việc hướng dẫn của giảng viên .",negative,thiet_bi_day_hoc
+701631,thường thì đồ án và bài tập cuối kỳ rất nhiều .,negative,bai_tap
+701635,"thầy vui tính , tiết học sôi động .",positive,hanh_vi
+701661,phương pháp giảng dạy của giảng viên chưa tạo được sự chủ động cho sinh viên .,negative,ky_nang_giang_day
+701697,thầy cho chép lý thuyết chung chung quá !,negative,ky_nang_giang_day
+701760,tương tác với sinh viên .,neutral,hanh_vi
+701826,thầy đẹp trai .,neutral,noi_chung
+701853,giảng viên giảng dạy tốt .,positive,ky_nang_giang_day
+701864,luôn luôn nguyên tắc và tương tác tốt đối với sinh viên .,positive,hanh_vi
+701870,chỉ có việc đọc slide và chấm điểm không giải thích gì thêm .,negative,ky_nang_giang_day
+701957,cô rất hay .,positive,ky_nang_giang_day
+702020,"cung cấp giáo trình đầy đủ , phiên bản có thể xem được trên máy tính pdf hoặc doc .",positive,cung_cap_tai_lieu
+702029,dạy rất tốt .,positive,ky_nang_giang_day
+702034,"giáo viên dạy hay , dễ hiểu .",positive,ky_nang_giang_day
+702044,thầy giảng rất nhiệt tình .,positive,hanh_vi
+702093,đôi khi cô hơi hình thức hóa một số vấn đề .,negative,ky_nang_giang_day
+702096,"thầy dạy rất rõ ràng , dễ hiểu .",positive,ky_nang_giang_day
+702135,"giảng viên tận tâm , nhiệt tình giải đáp thắc mắc .",positive,hanh_vi
+702197,bài tập và hướng dẫn giải bài tập trên lớp .,neutral,bai_tap
+702200,luôn giải đáp và chỉ hướng gỡ rối cho sinh viên nếu còn vướng bận !,positive,hanh_vi
+702219,cách truyền đạt hay .,positive,ky_nang_giang_day
+702242,"dạy hay , cách truyền đạt tốt .",positive,ky_nang_giang_day
+702268,giảng dạy dễ hiểu .,positive,ky_nang_giang_day
+702275,giảng bài hay dễ hiểu .,positive,ky_nang_giang_day
+702362,phòng thực hành ghế cao quá khiến học sinh ngồi dễ mỏi lưng .,negative,thiet_bi_day_hoc
+702368,thầy rất nhiệt tình giải đáp thắc mắc của sinh viên .,positive,hanh_vi
+702427,"cô dạy tốt , dễ tiếp thu .",positive,ky_nang_giang_day
+702451,không biết gì sau khi học môn này .,negative,kien_thuc
+702454,cô cho làm đồ án nhóm với lại cho bài tập theo từng tuần nên sinh viên có thời gian sắp xếp để làm bài .,positive,bai_tap
+702465,giảng dạy hơi dài dòng lan man dẫn đến khó hiểu .,negative,ky_nang_giang_day
+702519,không thông báo các buổi thực hành .,negative,chuong_trinh_hoc
+702548,và cách dạy của thầy khá khó hiểu ?,negative,ky_nang_giang_day
+702560,luôn đúng giờ .,positive,hanh_vi
+702571,cách giảng dạy của giáo viên .,neutral,ky_nang_giang_day
+702642,mỗi dạng bài thì thầy ghi ra 3 câu bài tập là ổn rồi .,positive,bai_tap
+702666,nhiều chỗ đọc mãi vẫn không thể hiểu .,negative,ky_nang_giang_day
+702746,nâng cấp phòng máy thực hành .,neutral,de_xuat
+702767,sự tận tình với học viên .,positive,hanh_vi
+702788,chấm điểm trên khmtdotuitdotedudotvn .,neutral,cham_diem
+702837,diễn đạt kỹ .,positive,ky_nang_giang_day
+702867,"phương pháp giảng dạy , truyền đạt kiến thức hay .",positive,ky_nang_giang_day
+702879,thanks !,positive,noi_chung
+702906,giảng bài hay .,positive,ky_nang_giang_day
+702923,luôn tạo được sự hứng thú và động lực học cho sinh viên .,positive,hanh_vi
+702953,nhiều khi hơi nhanh .,negative,ky_nang_giang_day
+702955,"thay vào đó nên dạy những nội dung liên quan hơn về ngành ta như cách cài đặt hệ điều hành lớp em có bạn không cài được hệ điều hành nữa , dạy thêm các kinh nghiệm khi phỏng vấn xin việc , xin học bổng , xin thực tập .",neutral,de_xuat
+702971,"giáo viên rất nhiệt tình , tận tâm hướng dẫn .",positive,hanh_vi
+703011,dạy nhanh đôi lúc gây khó hiểu .,negative,ky_nang_giang_day
+703066,hiểu và áp dụng được vào trong thực tế cuộc sống .,positive,kien_thuc
+703096,cô vui vẻ dễ thương hỗ trợ sinh viên tích cực .,positive,hanh_vi
+703111,nội dung thực hành rất hợp lý .,positive,kinh_nghiem
+703131,em thấy vấn đề điểm danh khi đi học là không hiệu quả .,negative,cham_diem
+703159,em tiếp thu chậm .,negative,ky_nang_giang_day

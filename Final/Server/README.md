@@ -6,13 +6,19 @@
 - Tạo .venv bằng lệnh 
   python -m venv .venv
 - Khởi động venv bằng lệnh 
-  venv\Scripts\activate
+  .\.venv\Scripts\Activate.ps1
 - Cài đặt thư viện:
   pip install -r requirements.txt
 - Chạy lệnh:
   python server.py
 
 # Endpoint
+## Web UI
+URL: http://localhost:5000/
+- Nhập nội dung cần phân tích.
+- Điều chỉnh threshold.
+- Bấm "Phân tích" để gọi POST /predict và xem category, sentiment, confidence.
+
 ## GET /health
 URL: http://localhost:5000/health
 Body: Không cần

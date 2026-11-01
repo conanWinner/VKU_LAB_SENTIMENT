@@ -1,0 +1,16 @@
+{
+  "id": "thngonquang/vku-absa-pilot-e4-bamibert",
+  "title": "VKU ABSA Pilot E4 BamiBERT",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "conanwinner1/vku-feedback"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

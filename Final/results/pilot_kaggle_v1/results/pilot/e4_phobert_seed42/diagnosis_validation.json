@@ -1,0 +1,640 @@
+{
+  "split": "validation",
+  "threshold": 0.55,
+  "per_aspect": {
+    "ky_nang_giang_day": {
+      "support": 624,
+      "false_positive": 60,
+      "missed": 68,
+      "wrong_sentiment": 16
+    },
+    "hanh_vi": {
+      "support": 608,
+      "false_positive": 45,
+      "missed": 38,
+      "wrong_sentiment": 7
+    },
+    "de_xuat": {
+      "support": 278,
+      "false_positive": 17,
+      "missed": 24,
+      "wrong_sentiment": 85
+    },
+    "bai_tap": {
+      "support": 154,
+      "false_positive": 26,
+      "missed": 14,
+      "wrong_sentiment": 16
+    },
+    "chuong_trinh_hoc": {
+      "support": 144,
+      "false_positive": 54,
+      "missed": 38,
+      "wrong_sentiment": 11
+    },
+    "kien_thuc": {
+      "support": 105,
+      "false_positive": 26,
+      "missed": 19,
+      "wrong_sentiment": 8
+    },
+    "kinh_nghiem": {
+      "support": 88,
+      "false_positive": 42,
+      "missed": 13,
+      "wrong_sentiment": 10
+    },
+    "cung_cap_tai_lieu": {
+      "support": 90,
+      "false_positive": 13,
+      "missed": 11,
+      "wrong_sentiment": 7
+    },
+    "thiet_bi_day_hoc": {
+      "support": 81,
+      "false_positive": 8,
+      "missed": 6,
+      "wrong_sentiment": 10
+    },
+    "cham_diem": {
+      "support": 43,
+      "false_positive": 11,
+      "missed": 9,
+      "wrong_sentiment": 2
+    },
+    "noi_chung": {
+      "support": 97,
+      "false_positive": 18,
+      "missed": 28,
+      "wrong_sentiment": 7
+    }
+  },
+  "per_aspect_pair_f1": {
+    "ky_nang_giang_day": 0.8709677419354839,
+    "hanh_vi": 0.9206868356500408,
+    "de_xuat": 0.6156648451730419,
+    "bai_tap": 0.775,
+    "chuong_trinh_hoc": 0.625,
+    "kien_thuc": 0.7188940092165899,
+    "kinh_nghiem": 0.6341463414634146,
+    "cung_cap_tai_lieu": 0.7912087912087912,
+    "thiet_bi_day_hoc": 0.7926829268292683,
+    "cham_diem": 0.7272727272727273,
+    "noi_chung": 0.6739130434782609
+  },
+  "by_number_of_aspects": {
+    "single_aspect": {
+      "sentences": 940,
+      "pair_f1": 0.8311688311688312
+    },
+    "multi_aspect": {
+      "sentences": 635,
+      "pair_f1": 0.7726252804786836
+    }
+  },
+  "confused_pairs": [
+    {
+      "missed": "noi_chung",
+      "predicted_instead": "hanh_vi",
+      "count": 10,
+      "train_cooccurrence": 2
+    },
+    {
+      "missed": "chuong_trinh_hoc",
+      "predicted_instead": "kinh_nghiem",
+      "count": 8,
+      "train_cooccurrence": 66
+    },
+    {
+      "missed": "ky_nang_giang_day",
+      "predicted_instead": "chuong_trinh_hoc",
+      "count": 7,
+      "train_cooccurrence": 101
+    },
+    {
+      "missed": "noi_chung",
+      "predicted_instead": "ky_nang_giang_day",
+      "count": 6,
+      "train_cooccurrence": 1
+    },
+    {
+      "missed": "ky_nang_giang_day",
+      "predicted_instead": "hanh_vi",
+      "count": 4,
+      "train_cooccurrence": 1692
+    },
+    {
+      "missed": "hanh_vi",
+      "predicted_instead": "ky_nang_giang_day",
+      "count": 4,
+      "train_cooccurrence": 1692
+    },
+    {
+      "missed": "chuong_trinh_hoc",
+      "predicted_instead": "ky_nang_giang_day",
+      "count": 4,
+      "train_cooccurrence": 101
+    },
+    {
+      "missed": "chuong_trinh_hoc",
+      "predicted_instead": "noi_chung",
+      "count": 4,
+      "train_cooccurrence": 0
+    },
+    {
+      "missed": "kien_thuc",
+      "predicted_instead": "ky_nang_giang_day",
+      "count": 4,
+      "train_cooccurrence": 375
+    },
+    {
+      "missed": "noi_chung",
+      "predicted_instead": "de_xuat",
+      "count": 4,
+      "train_cooccurrence": 4
+    },
+    {
+      "missed": "noi_chung",
+      "predicted_instead": "chuong_trinh_hoc",
+      "count": 4,
+      "train_cooccurrence": 0
+    },
+    {
+      "missed": "ky_nang_giang_day",
+      "predicted_instead": "bai_tap",
+      "count": 3,
+      "train_cooccurrence": 229
+    },
+    {
+      "missed": "ky_nang_giang_day",
+      "predicted_instead": "kinh_nghiem",
+      "count": 3,
+      "train_cooccurrence": 203
+    },
+    {
+      "missed": "de_xuat",
+      "predicted_instead": "noi_chung",
+      "count": 3,
+      "train_cooccurrence": 4
+    },
+    {
+      "missed": "chuong_trinh_hoc",
+      "predicted_instead": "bai_tap",
+      "count": 3,
+      "train_cooccurrence": 58
+    },
+    {
+      "missed": "chuong_trinh_hoc",
+      "predicted_instead": "thiet_bi_day_hoc",
+      "count": 3,
+      "train_cooccurrence": 8
+    },
+    {
+      "missed": "ky_nang_giang_day",
+      "predicted_instead": "kien_thuc",
+      "count": 2,
+      "train_cooccurrence": 375
+    },
+    {
+      "missed": "ky_nang_giang_day",
+      "predicted_instead": "noi_chung",
+      "count": 2,
+      "train_cooccurrence": 1
+    },
+    {
+      "missed": "hanh_vi",
+      "predicted_instead": "bai_tap",
+      "count": 2,
+      "train_cooccurrence": 155
+    },
+    {
+      "missed": "hanh_vi",
+      "predicted_instead": "cung_cap_tai_lieu",
+      "count": 2,
+      "train_cooccurrence": 94
+    },
+    {
+      "missed": "hanh_vi",
+      "predicted_instead": "noi_chung",
+      "count": 2,
+      "train_cooccurrence": 2
+    },
+    {
+      "missed": "de_xuat",
+      "predicted_instead": "cham_diem",
+      "count": 2,
+      "train_cooccurrence": 70
+    },
+    {
+      "missed": "bai_tap",
+      "predicted_instead": "ky_nang_giang_day",
+      "count": 2,
+      "train_cooccurrence": 229
+    },
+    {
+      "missed": "bai_tap",
+      "predicted_instead": "chuong_trinh_hoc",
+      "count": 2,
+      "train_cooccurrence": 58
+    },
+    {
+      "missed": "bai_tap",
+      "predicted_instead": "kinh_nghiem",
+      "count": 2,
+      "train_cooccurrence": 56
+    },
+    {
+      "missed": "kien_thuc",
+      "predicted_instead": "chuong_trinh_hoc",
+      "count": 2,
+      "train_cooccurrence": 66
+    },
+    {
+      "missed": "kinh_nghiem",
+      "predicted_instead": "chuong_trinh_hoc",
+      "count": 2,
+      "train_cooccurrence": 66
+    },
+    {
+      "missed": "kinh_nghiem",
+      "predicted_instead": "kien_thuc",
+      "count": 2,
+      "train_cooccurrence": 87
+    },
+    {
+      "missed": "cung_cap_tai_lieu",
+      "predicted_instead": "chuong_trinh_hoc",
+      "count": 2,
+      "train_cooccurrence": 27
+    },
+    {
+      "missed": "cung_cap_tai_lieu",
+      "predicted_instead": "kinh_nghiem",
+      "count": 2,
+      "train_cooccurrence": 11
+    },
+    {
+      "missed": "ky_nang_giang_day",
+      "predicted_instead": "de_xuat",
+      "count": 1,
+      "train_cooccurrence": 417
+    },
+    {
+      "missed": "ky_nang_giang_day",
+      "predicted_instead": "thiet_bi_day_hoc",
+      "count": 1,
+      "train_cooccurrence": 15
+    },
+    {
+      "missed": "ky_nang_giang_day",
+      "predicted_instead": "cham_diem",
+      "count": 1,
+      "train_cooccurrence": 35
+    },
+    {
+      "missed": "hanh_vi",
+      "predicted_instead": "kien_thuc",
+      "count": 1,
+      "train_cooccurrence": 269
+    },
+    {
+      "missed": "hanh_vi",
+      "predicted_instead": "kinh_nghiem",
+      "count": 1,
+      "train_cooccurrence": 115
+    },
+    {
+      "missed": "de_xuat",
+      "predicted_instead": "ky_nang_giang_day",
+      "count": 1,
+      "train_cooccurrence": 417
+    },
+    {
+      "missed": "de_xuat",
+      "predicted_instead": "hanh_vi",
+      "count": 1,
+      "train_cooccurrence": 196
+    },
+    {
+      "missed": "de_xuat",
+      "predicted_instead": "kien_thuc",
+      "count": 1,
+      "train_cooccurrence": 59
+    },
+    {
+      "missed": "de_xuat",
+      "predicted_instead": "kinh_nghiem",
+      "count": 1,
+      "train_cooccurrence": 148
+    },
+    {
+      "missed": "de_xuat",
+      "predicted_instead": "cung_cap_tai_lieu",
+      "count": 1,
+      "train_cooccurrence": 239
+    },
+    {
+      "missed": "de_xuat",
+      "predicted_instead": "thiet_bi_day_hoc",
+      "count": 1,
+      "train_cooccurrence": 284
+    },
+    {
+      "missed": "bai_tap",
+      "predicted_instead": "hanh_vi",
+      "count": 1,
+      "train_cooccurrence": 155
+    },
+    {
+      "missed": "bai_tap",
+      "predicted_instead": "kien_thuc",
+      "count": 1,
+      "train_cooccurrence": 47
+    },
+    {
+      "missed": "chuong_trinh_hoc",
+      "predicted_instead": "kien_thuc",
+      "count": 1,
+      "train_cooccurrence": 66
+    },
+    {
+      "missed": "chuong_trinh_hoc",
+      "predicted_instead": "cung_cap_tai_lieu",
+      "count": 1,
+      "train_cooccurrence": 27
+    },
+    {
+      "missed": "chuong_trinh_hoc",
+      "predicted_instead": "cham_diem",
+      "count": 1,
+      "train_cooccurrence": 22
+    },
+    {
+      "missed": "kien_thuc",
+      "predicted_instead": "hanh_vi",
+      "count": 1,
+      "train_cooccurrence": 269
+    },
+    {
+      "missed": "kien_thuc",
+      "predicted_instead": "kinh_nghiem",
+      "count": 1,
+      "train_cooccurrence": 87
+    },
+    {
+      "missed": "kien_thuc",
+      "predicted_instead": "cung_cap_tai_lieu",
+      "count": 1,
+      "train_cooccurrence": 30
+    },
+    {
+      "missed": "kien_thuc",
+      "predicted_instead": "noi_chung",
+      "count": 1,
+      "train_cooccurrence": 0
+    },
+    {
+      "missed": "kinh_nghiem",
+      "predicted_instead": "bai_tap",
+      "count": 1,
+      "train_cooccurrence": 56
+    },
+    {
+      "missed": "cung_cap_tai_lieu",
+      "predicted_instead": "de_xuat",
+      "count": 1,
+      "train_cooccurrence": 239
+    },
+    {
+      "missed": "cung_cap_tai_lieu",
+      "predicted_instead": "bai_tap",
+      "count": 1,
+      "train_cooccurrence": 71
+    },
+    {
+      "missed": "cung_cap_tai_lieu",
+      "predicted_instead": "kien_thuc",
+      "count": 1,
+      "train_cooccurrence": 30
+    },
+    {
+      "missed": "cung_cap_tai_lieu",
+      "predicted_instead": "cham_diem",
+      "count": 1,
+      "train_cooccurrence": 9
+    },
+    {
+      "missed": "thiet_bi_day_hoc",
+      "predicted_instead": "de_xuat",
+      "count": 1,
+      "train_cooccurrence": 284
+    },
+    {
+      "missed": "thiet_bi_day_hoc",
+      "predicted_instead": "chuong_trinh_hoc",
+      "count": 1,
+      "train_cooccurrence": 8
+    },
+    {
+      "missed": "thiet_bi_day_hoc",
+      "predicted_instead": "kinh_nghiem",
+      "count": 1,
+      "train_cooccurrence": 12
+    },
+    {
+      "missed": "thiet_bi_day_hoc",
+      "predicted_instead": "noi_chung",
+      "count": 1,
+      "train_cooccurrence": 0
+    },
+    {
+      "missed": "cham_diem",
+      "predicted_instead": "bai_tap",
+      "count": 1,
+      "train_cooccurrence": 49
+    },
+    {
+      "missed": "cham_diem",
+      "predicted_instead": "chuong_trinh_hoc",
+      "count": 1,
+      "train_cooccurrence": 22
+    },
+    {
+      "missed": "cham_diem",
+      "predicted_instead": "cung_cap_tai_lieu",
+      "count": 1,
+      "train_cooccurrence": 9
+    },
+    {
+      "missed": "cham_diem",
+      "predicted_instead": "noi_chung",
+      "count": 1,
+      "train_cooccurrence": 0
+    },
+    {
+      "missed": "noi_chung",
+      "predicted_instead": "cham_diem",
+      "count": 1,
+      "train_cooccurrence": 0
+    }
+  ],
+  "confusion_matrix": [
+    [
+      0,
+      4,
+      1,
+      3,
+      7,
+      2,
+      3,
+      0,
+      1,
+      1,
+      2
+    ],
+    [
+      4,
+      0,
+      0,
+      2,
+      0,
+      1,
+      1,
+      2,
+      0,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      2,
+      3
+    ],
+    [
+      2,
+      1,
+      0,
+      0,
+      2,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      4,
+      0,
+      0,
+      3,
+      0,
+      1,
+      8,
+      1,
+      3,
+      1,
+      4
+    ],
+    [
+      4,
+      1,
+      0,
+      0,
+      2,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      6,
+      10,
+      4,
+      0,
+      4,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "train_support": {
+    "ky_nang_giang_day": 4546,
+    "hanh_vi": 4474,
+    "de_xuat": 2044,
+    "bai_tap": 1241,
+    "chuong_trinh_hoc": 989,
+    "kien_thuc": 867,
+    "kinh_nghiem": 652,
+    "cung_cap_tai_lieu": 646,
+    "thiet_bi_day_hoc": 564,
+    "cham_diem": 314,
+    "noi_chung": 546
+  },
+  "ignore_index": -100
+}

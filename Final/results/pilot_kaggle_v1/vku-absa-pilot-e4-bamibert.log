@@ -1,0 +1,135 @@
+[{"stream_name":"stderr","time":6.868433233,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":6.868487991,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":7.842352831,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.842380934,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.842401851,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.842406103,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.452819608,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.452849759,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.452856038,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.452863375,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":26.053198616,"data":"923 packages\n"}
+,{"stream_name":"stdout","time":49.854677463,"data":"2.11.0+cu128 5.5.0\n"}
+,{"stream_name":"stdout","time":49.854707487,"data":"\n"}
+,{"stream_name":"stdout","time":49.854712839,"data":"Tesla T4, 15360 MiB\n"}
+,{"stream_name":"stdout","time":49.854717004,"data":"Tesla T4, 15360 MiB\n"}
+,{"stream_name":"stdout","time":49.854721405,"data":"\n"}
+,{"stream_name":"stdout","time":49.893666001,"data":"13 source files written\n"}
+,{"stream_name":"stdout","time":52.219463097,"data":"data dir: /kaggle/input/datasets/conanwinner1/vku-feedback\n"}
+,{"stream_name":"stdout","time":52.219498347,"data":"dataset hash: a947ca4a9e5ed36625eb97abe9e63f2f4f5b66e66f109b31e665890cb3e05899 | expected: a947ca4a9e5ed36625eb97abe9e63f2f4f5b66e66f109b31e665890cb3e05899 | match: True\n"}
+,{"stream_name":"stdout","time":52.21950508,"data":"\n"}
+,{"stream_name":"stdout","time":52.219509667,"data":"$ python -m absa.train --model e4 --seed 42 --data-dir /kaggle/input/datasets/conanwinner1/vku-feedback --output-dir results/pilot --run-name e4_phobert_seed42\n"}
+,{"stream_name":"stdout","time":66.388997702,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":73.667931806,"data":"\n"}
+,{"stream_name":"stdout","time":73.702786792,"data":"\u001b[1mRobertaModel LOAD REPORT\u001b[0m from: vinai/phobert-base\n"}
+,{"stream_name":"stdout","time":73.703894953,"data":"Key                             | Status     |  | \n"}
+,{"stream_name":"stdout","time":73.704846344,"data":"--------------------------------+------------+--+-\n"}
+,{"stream_name":"stdout","time":73.705645444,"data":"lm_head.decoder.weight          | UNEXPECTED |  | \n"}
+,{"stream_name":"stdout","time":73.70647898,"data":"lm_head.decoder.bias            | UNEXPECTED |  | \n"}
+,{"stream_name":"stdout","time":73.707364806,"data":"lm_head.layer_norm.weight       | UNEXPECTED |  | \n"}
+,{"stream_name":"stdout","time":73.708412007,"data":"lm_head.dense.bias              | UNEXPECTED |  | \n"}
+,{"stream_name":"stdout","time":73.709390665,"data":"lm_head.layer_norm.bias         | UNEXPECTED |  | \n"}
+,{"stream_name":"stdout","time":73.710748391,"data":"lm_head.dense.weight            | UNEXPECTED |  | \n"}
+,{"stream_name":"stdout","time":73.711525566,"data":"roberta.embeddings.position_ids | UNEXPECTED |  | \n"}
+,{"stream_name":"stdout","time":73.712229256,"data":"lm_head.bias                    | UNEXPECTED |  | \n"}
+,{"stream_name":"stdout","time":73.712987911,"data":"\n"}
+,{"stream_name":"stdout","time":73.713751507,"data":"Notes:\n"}
+,{"stream_name":"stdout","time":73.714517842,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":193.21573807,"data":"{\"epoch\": 1, \"train_loss\": 1.1556908577848017, \"val_score\": 0.7014604810996563, \"val_aspect_f1_micro\": 0.7878006872852235, \"val_pair_f1_micro\": 0.7014604810996563, \"seconds\": 103.02206611633301}\n"}
+,{"stream_name":"stdout","time":299.612823931,"data":"{\"epoch\": 2, \"train_loss\": 0.5289900734016065, \"val_score\": 0.7617839780173326, \"val_aspect_f1_micro\": 0.8505601352779539, \"val_pair_f1_micro\": 0.7617839780173326, \"seconds\": 209.41863799095154}\n"}
+,{"stream_name":"stdout","time":405.241959581,"data":"{\"epoch\": 3, \"train_loss\": 0.4076092312154308, \"val_score\": 0.7733222522335342, \"val_aspect_f1_micro\": 0.853521712029919, \"val_pair_f1_micro\": 0.7733222522335342, \"seconds\": 315.0478792190552}\n"}
+,{"stream_name":"stdout","time":510.726543555,"data":"{\"epoch\": 4, \"train_loss\": 0.3336936037443327, \"val_score\": 0.7748385752968132, \"val_aspect_f1_micro\": 0.8560716517392211, \"val_pair_f1_micro\": 0.7748385752968132, \"seconds\": 420.53299593925476}\n"}
+,{"stream_name":"stdout","time":616.092930842,"data":"{\"epoch\": 5, \"train_loss\": 0.2805838331402269, \"val_score\": 0.7784208350558081, \"val_aspect_f1_micro\": 0.8590326581231914, \"val_pair_f1_micro\": 0.7784208350558081, \"seconds\": 525.898909330368}\n"}
+,{"stream_name":"stdout","time":721.220174679,"data":"{\"epoch\": 6, \"train_loss\": 0.24128942942414222, \"val_score\": 0.7903866248693835, \"val_aspect_f1_micro\": 0.870637408568443, \"val_pair_f1_micro\": 0.7903866248693835, \"seconds\": 631.0259783267975}\n"}
+,{"stream_name":"stdout","time":827.230078189,"data":"{\"epoch\": 7, \"train_loss\": 0.2048252086767278, \"val_score\": 0.7933054393305439, \"val_aspect_f1_micro\": 0.8707112970711297, \"val_pair_f1_micro\": 0.7933054393305439, \"seconds\": 737.0358195304871}\n"}
+,{"stream_name":"stdout","time":932.62011757,"data":"{\"epoch\": 8, \"train_loss\": 0.18452255861059333, \"val_score\": 0.7944915254237287, \"val_aspect_f1_micro\": 0.871186440677966, \"val_pair_f1_micro\": 0.7944915254237287, \"seconds\": 842.4260478019714}\n"}
+,{"stream_name":"stdout","time":943.630011293,"data":"saved results/pilot/e4_phobert_seed42\n"}
+,{"stream_name":"stdout","time":945.198030449,"data":"[893 s]\n"}
+,{"stream_name":"stdout","time":945.198872783,"data":"\n"}
+,{"stream_name":"stdout","time":945.198894116,"data":"$ python -m absa.evaluate results/pilot/e4_phobert_seed42\n"}
+,{"stream_name":"stdout","time":945.427078272,"data":"validation fixed_0.5  aspect_f1=0.8712 pair_f1=0.7945 pair_macro=0.7378 sent_acc_gold=0.9074\n"}
+,{"stream_name":"stdout","time":945.428253793,"data":"validation global     aspect_f1=0.8743 pair_f1=0.7977 pair_macro=0.7405 sent_acc_gold=0.9074\n"}
+,{"stream_name":"stdout","time":945.429177599,"data":"validation per_aspect aspect_f1=0.8776 pair_f1=0.8010 pair_macro=0.7468 sent_acc_gold=0.9074\n"}
+,{"stream_name":"stdout","time":945.430055414,"data":"global threshold: 0.55\n"}
+,{"stream_name":"stdout","time":945.447026332,"data":"[0 s]\n"}
+,{"stream_name":"stdout","time":945.447771516,"data":"\n"}
+,{"stream_name":"stdout","time":945.447791546,"data":"$ python -m absa.train --model e2 --seed 42 --encoder Qualcomm-AI-Research/BamiBERT --data-dir /kaggle/input/datasets/conanwinner1/vku-feedback --output-dir results/pilot --run-name e2_bamibert_seed42\n"}
+,{"stream_name":"stdout","time":953.119248026,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":963.618532059,"data":"\n"}
+,{"stream_name":"stdout","time":963.692125555,"data":"\u001b[1mRobertaModel LOAD REPORT\u001b[0m from: Qualcomm-AI-Research/BamiBERT\n"}
+,{"stream_name":"stdout","time":963.692745303,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stdout","time":963.693933801,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stdout","time":963.695126359,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stdout","time":963.696102822,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stdout","time":963.697293104,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stdout","time":963.698479458,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stdout","time":963.699641056,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stdout","time":963.700673501,"data":"lm_head.decoder.bias      | UNEXPECTED | \n"}
+,{"stream_name":"stdout","time":963.701522194,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stdout","time":963.7022847,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stdout","time":963.703112671,"data":"\n"}
+,{"stream_name":"stdout","time":963.703860192,"data":"Notes:\n"}
+,{"stream_name":"stdout","time":963.704559247,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":963.70526115,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":1074.254069531,"data":"{\"epoch\": 1, \"train_loss\": 1.2276340864515036, \"val_score\": 0.5681323465389639, \"val_aspect_f1_micro\": 0.629516760992599, \"val_pair_f1_micro\": 0.5681323465389639, \"seconds\": 108.85508251190186}\n"}
+,{"stream_name":"stdout","time":1183.942508605,"data":"{\"epoch\": 2, \"train_loss\": 0.7625398681070028, \"val_score\": 0.7185217017619253, \"val_aspect_f1_micro\": 0.7971637301246239, \"val_pair_f1_micro\": 0.7185217017619253, \"seconds\": 218.54365420341492}\n"}
+,{"stream_name":"stdout","time":1292.740678636,"data":"{\"epoch\": 3, \"train_loss\": 0.5811317561173373, \"val_score\": 0.7554621848739496, \"val_aspect_f1_micro\": 0.8327731092436976, \"val_pair_f1_micro\": 0.7554621848739496, \"seconds\": 327.34108662605286}\n"}
+,{"stream_name":"stdout","time":1401.470988655,"data":"{\"epoch\": 4, \"train_loss\": 0.48004401259626567, \"val_score\": 0.7691981332201951, \"val_aspect_f1_micro\": 0.8536274925753076, \"val_pair_f1_micro\": 0.7691981332201951, \"seconds\": 436.0711393356323}\n"}
+,{"stream_name":"stdout","time":1510.120307571,"data":"{\"epoch\": 5, \"train_loss\": 0.40571280453730835, \"val_score\": 0.7791605146593545, \"val_aspect_f1_micro\": 0.8584686774941995, \"val_pair_f1_micro\": 0.7791605146593545, \"seconds\": 544.7209680080414}\n"}
+,{"stream_name":"stdout","time":1618.223118993,"data":"{\"epoch\": 6, \"train_loss\": 0.3547865278349164, \"val_score\": 0.7818947368421052, \"val_aspect_f1_micro\": 0.8606315789473684, \"val_pair_f1_micro\": 0.7818947368421052, \"seconds\": 652.8239440917969}\n"}
+,{"stream_name":"stdout","time":1727.380328936,"data":"{\"epoch\": 7, \"train_loss\": 0.31351069919764996, \"val_score\": 0.7842973480893715, \"val_aspect_f1_micro\": 0.862810607642514, \"val_pair_f1_micro\": 0.7842973480893715, \"seconds\": 761.9817276000977}\n"}
+,{"stream_name":"stdout","time":1836.158078259,"data":"{\"epoch\": 8, \"train_loss\": 0.28875955289459965, \"val_score\": 0.7880710659898477, \"val_aspect_f1_micro\": 0.8646362098138748, \"val_pair_f1_micro\": 0.7880710659898477, \"seconds\": 870.7597076892853}\n"}
+,{"stream_name":"stdout","time":1849.069699678,"data":"saved results/pilot/e2_bamibert_seed42\n"}
+,{"stream_name":"stdout","time":1850.368828841,"data":"[905 s]\n"}
+,{"stream_name":"stdout","time":1850.369666657,"data":"\n"}
+,{"stream_name":"stdout","time":1850.369696794,"data":"$ python -m absa.evaluate results/pilot/e2_bamibert_seed42\n"}
+,{"stream_name":"stdout","time":1850.601772428,"data":"validation fixed_0.5  aspect_f1=0.8646 pair_f1=0.7881 pair_macro=0.7322 sent_acc_gold=0.9035\n"}
+,{"stream_name":"stdout","time":1850.601798596,"data":"validation global     aspect_f1=0.8654 pair_f1=0.7922 pair_macro=0.7404 sent_acc_gold=0.9035\n"}
+,{"stream_name":"stdout","time":1850.602496992,"data":"validation per_aspect aspect_f1=0.8708 pair_f1=0.7981 pair_macro=0.7438 sent_acc_gold=0.9035\n"}
+,{"stream_name":"stdout","time":1850.603239662,"data":"global threshold: 0.65\n"}
+,{"stream_name":"stdout","time":1850.620275037,"data":"[0 s]\n"}
+,{"stream_name":"stdout","time":1850.621044236,"data":"\n"}
+,{"stream_name":"stdout","time":1850.621066799,"data":"$ python -m absa.train --model e4 --seed 42 --encoder Qualcomm-AI-Research/BamiBERT --data-dir /kaggle/input/datasets/conanwinner1/vku-feedback --output-dir results/pilot --run-name e4_bamibert_seed42\n"}
+,{"stream_name":"stdout","time":1858.118349544,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":1859.10293367,"data":"\n"}
+,{"stream_name":"stdout","time":1859.176100878,"data":"\u001b[1mRobertaModel LOAD REPORT\u001b[0m from: Qualcomm-AI-Research/BamiBERT\n"}
+,{"stream_name":"stdout","time":1859.177097513,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stdout","time":1859.178022183,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stdout","time":1859.178942688,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stdout","time":1859.179856869,"data":"lm_head.decoder.bias      | UNEXPECTED | \n"}
+,{"stream_name":"stdout","time":1859.18064635,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stdout","time":1859.181565087,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stdout","time":1859.182366465,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stdout","time":1859.183252742,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stdout","time":1859.184041454,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stdout","time":1859.184766108,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stdout","time":1859.185461932,"data":"\n"}
+,{"stream_name":"stdout","time":1859.186172791,"data":"Notes:\n"}
+,{"stream_name":"stdout","time":1859.186910671,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":1859.187630381,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":1973.078759349,"data":"{\"epoch\": 1, \"train_loss\": 1.1995684771557873, \"val_score\": 0.6458816094375396, \"val_aspect_f1_micro\": 0.7423635980619337, \"val_pair_f1_micro\": 0.6458816094375396, \"seconds\": 111.87923192977905}\n"}
+,{"stream_name":"stdout","time":2086.02312657,"data":"{\"epoch\": 2, \"train_loss\": 0.584887799179035, \"val_score\": 0.7412528807877646, \"val_aspect_f1_micro\": 0.8326000419023675, \"val_pair_f1_micro\": 0.7412528807877646, \"seconds\": 224.82032322883606}\n"}
+,{"stream_name":"stdout","time":2198.062642743,"data":"{\"epoch\": 3, \"train_loss\": 0.45801794591746975, \"val_score\": 0.7465739415013295, \"val_aspect_f1_micro\": 0.836162814481489, \"val_pair_f1_micro\": 0.7465739415013295, \"seconds\": 336.86409068107605}\n"}
+,{"stream_name":"stdout","time":2310.049300115,"data":"{\"epoch\": 4, \"train_loss\": 0.3743964768318313, \"val_score\": 0.7631305791986713, \"val_aspect_f1_micro\": 0.8486609923188706, \"val_pair_f1_micro\": 0.7631305791986713, \"seconds\": 448.84551215171814}\n"}
+,{"stream_name":"stdout","time":2421.759656039,"data":"{\"epoch\": 5, \"train_loss\": 0.3122159659893911, \"val_score\": 0.7723223534286308, \"val_aspect_f1_micro\": 0.8634762792624819, \"val_pair_f1_micro\": 0.7723223534286308, \"seconds\": 560.5610046386719}\n"}
+,{"stream_name":"stdout","time":2533.009372427,"data":"{\"epoch\": 6, \"train_loss\": 0.26045950790448635, \"val_score\": 0.7811715481171548, \"val_aspect_f1_micro\": 0.8698744769874478, \"val_pair_f1_micro\": 0.7811715481171548, \"seconds\": 671.8106877803802}\n"}
+,{"stream_name":"stdout","time":2645.406332296,"data":"{\"epoch\": 7, \"train_loss\": 0.22040916999195065, \"val_score\": 0.7830974188176519, \"val_aspect_f1_micro\": 0.8688592839300583, \"val_pair_f1_micro\": 0.7830974188176519, \"seconds\": 784.2071716785431}\n"}
+,{"stream_name":"stdout","time":2757.329738396,"data":"{\"epoch\": 8, \"train_loss\": 0.1968117110703266, \"val_score\": 0.7873817034700314, \"val_aspect_f1_micro\": 0.873186119873817, \"val_pair_f1_micro\": 0.7873817034700314, \"seconds\": 896.130402803421}\n"}
+,{"stream_name":"stdout","time":2770.48813713,"data":"saved results/pilot/e4_bamibert_seed42\n"}
+,{"stream_name":"stdout","time":2771.811759154,"data":"[921 s]\n"}
+,{"stream_name":"stdout","time":2771.812586967,"data":"\n"}
+,{"stream_name":"stdout","time":2771.81262402,"data":"$ python -m absa.evaluate results/pilot/e4_bamibert_seed42\n"}
+,{"stream_name":"stdout","time":2772.041161761,"data":"validation fixed_0.5  aspect_f1=0.8732 pair_f1=0.7874 pair_macro=0.7303 sent_acc_gold=0.8971\n"}
+,{"stream_name":"stdout","time":2772.041193592,"data":"validation global     aspect_f1=0.8779 pair_f1=0.7919 pair_macro=0.7378 sent_acc_gold=0.8971\n"}
+,{"stream_name":"stdout","time":2772.04192389,"data":"validation per_aspect aspect_f1=0.8808 pair_f1=0.7941 pair_macro=0.7410 sent_acc_gold=0.8971\n"}
+,{"stream_name":"stdout","time":2772.042635516,"data":"global threshold: 0.7\n"}
+,{"stream_name":"stdout","time":2772.059328571,"data":"[0 s]\n"}
+,{"stream_name":"stderr","time":2774.341381825,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2774.341408412,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2774.512639459,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2774.512674463,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2775.278794135,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":2775.363041024,"data":"[NbConvertApp] Writing 82856 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":2777.753768785,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2778.26052298,"data":"[NbConvertApp] Writing 420663 bytes to __results__.html\n"}
+]

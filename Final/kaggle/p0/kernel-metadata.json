@@ -1,0 +1,18 @@
+{
+  "id": "thngonquang/vku-absa-p0-core",
+  "title": "VKU ABSA P0 Core",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "thngonquang/vku-feedback-v2"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": [
+    "conanwinner1/w2vec/pyTorch/default/1"
+  ]
+}

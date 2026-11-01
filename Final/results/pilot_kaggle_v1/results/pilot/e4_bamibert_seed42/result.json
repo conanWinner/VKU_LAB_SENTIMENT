@@ -1,0 +1,115 @@
+{
+  "run_name": "e4_bamibert_seed42",
+  "config": {
+    "model": "e4",
+    "seed": 42,
+    "encoder": "Qualcomm-AI-Research/BamiBERT",
+    "revision": null,
+    "preprocess": "raw",
+    "word2vec": null,
+    "data_dir": "/kaggle/input/datasets/conanwinner1/vku-feedback",
+    "output_dir": "results/pilot",
+    "run_name": "e4_bamibert_seed42",
+    "alpha": 1.0,
+    "beta": 1.0,
+    "selection": "pair",
+    "lr": 2e-05,
+    "epochs": 8,
+    "limit": null,
+    "device": null,
+    "save_checkpoint": false,
+    "batch_size": 16,
+    "eval_batch_size": 32,
+    "patience": 2
+  },
+  "code_commit": "e89f1ce+src-fa630b1c6f77",
+  "dataset_hash": "a947ca4a9e5ed36625eb97abe9e63f2f4f5b66e66f109b31e665890cb3e05899",
+  "limited_smoke_run": false,
+  "num_sentences": {
+    "train": 11389,
+    "validation": 1575,
+    "test": 3160
+  },
+  "truncation_rate": {
+    "train": 8.780402142418122e-05,
+    "validation": 0.0006349206349206349,
+    "test": 0.0
+  },
+  "model_commit": "57bc1340debbe4e348ec549047a763caebe4a977",
+  "best_epoch": 8,
+  "best_val_score": 0.7873817034700314,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.1995684771557873,
+      "val_score": 0.6458816094375396,
+      "val_aspect_f1_micro": 0.7423635980619337,
+      "val_pair_f1_micro": 0.6458816094375396,
+      "seconds": 111.87923192977905
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.584887799179035,
+      "val_score": 0.7412528807877646,
+      "val_aspect_f1_micro": 0.8326000419023675,
+      "val_pair_f1_micro": 0.7412528807877646,
+      "seconds": 224.82032322883606
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.45801794591746975,
+      "val_score": 0.7465739415013295,
+      "val_aspect_f1_micro": 0.836162814481489,
+      "val_pair_f1_micro": 0.7465739415013295,
+      "seconds": 336.86409068107605
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.3743964768318313,
+      "val_score": 0.7631305791986713,
+      "val_aspect_f1_micro": 0.8486609923188706,
+      "val_pair_f1_micro": 0.7631305791986713,
+      "seconds": 448.84551215171814
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.3122159659893911,
+      "val_score": 0.7723223534286308,
+      "val_aspect_f1_micro": 0.8634762792624819,
+      "val_pair_f1_micro": 0.7723223534286308,
+      "seconds": 560.5610046386719
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.26045950790448635,
+      "val_score": 0.7811715481171548,
+      "val_aspect_f1_micro": 0.8698744769874478,
+      "val_pair_f1_micro": 0.7811715481171548,
+      "seconds": 671.8106877803802
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.22040916999195065,
+      "val_score": 0.7830974188176519,
+      "val_aspect_f1_micro": 0.8688592839300583,
+      "val_pair_f1_micro": 0.7830974188176519,
+      "seconds": 784.2071716785431
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.1968117110703266,
+      "val_score": 0.7873817034700314,
+      "val_aspect_f1_micro": 0.873186119873817,
+      "val_pair_f1_micro": 0.7873817034700314,
+      "seconds": 896.130402803421
+    }
+  ],
+  "train_seconds": 909.2932040691376,
+  "peak_gpu_memory_mb": 2517.35107421875,
+  "versions": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.1.3",
+    "transformers": "5.5.0"
+  }
+}
