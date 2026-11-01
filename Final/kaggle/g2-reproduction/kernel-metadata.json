@@ -1,0 +1,18 @@
+{
+  "id": "thngonquang/vku-absa-g2-reproduction",
+  "title": "VKU ABSA G2 Reproduction",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "conanwinner1/vku-feedback"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": [
+    "conanwinner1/w2vec/pyTorch/default/1"
+  ]
+}
